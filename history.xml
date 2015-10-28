@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="g++ noversion nomachine -Wall -c">
+      <target file="main.o" lastModified="150ae718a40">
+         <source file="src/main.cpp" lastModified="150ae6885a8"/>
+      </target>
+   </processor>
+   <processor signature="gcc -lSDL2">
+      <target file="main" lastModified="150ae718a40">
+         <source file="../../../../../../usr/local/lib/libSDL2.a" lastModified="150adf4c0f0"/>
+         <source file="../../../../../../usr/local/lib/libSDL2-2.0.so.0.4.0" lastModified="150adf4c0f0"/>
+         <source file="main.o" lastModified="150ae718a40"/>
+      </target>
+   </processor>
+</history>

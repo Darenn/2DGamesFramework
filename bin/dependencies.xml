@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dependencies>
+   <includePath signature="">
+      <source file="../src/main.cpp" lastModified="150aed4a170">
+         <include file="../src/Game.h"/>
+         <sysinclude file="../../../../../../../usr/local/include/SDL2/SDL.h"/>
+      </source>
+      <source file="../src/Game.h" lastModified="150aed25f50">
+         <sysinclude file="../../../../../../../usr/local/include/SDL2/SDL.h"/>
+      </source>
+   </includePath>
+</dependencies>

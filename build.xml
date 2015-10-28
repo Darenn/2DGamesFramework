@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<project name = "project_sdl" default = "run">
+
+  <taskdef resource="cpptasks.tasks"/>
+
+  <target name = "setup">
+    <mkdir dir = "./bin/"/>
+    <mkdir dir = "./src/"/>
+  </target>
+
+  <target name = "clean">
+    <delete dir = "bin/"/>
+  </target>
+
+  <target name = "compile" depends = "setup">
+    <cc outtype="executable" outfile="./bin/main" name = "g++">
+      <compilerarg value ="-Wall" />
+      <libset libs="SDL2"/>
+      <libset libs="stdc++"/>
+      <fileset dir="./src/" includes="*.cpp"/>
+    </cc>
+  </target>
+
+  <target name = "run" depends = "compile">
+    <exec executable = "./bin/main"/>
+  </target>
+
+</project>
