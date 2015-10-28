@@ -17,6 +17,7 @@
     <cc outtype="executable" outfile="./bin/main" name = "g++">
       <compilerarg value ="-Wall" />
       <libset libs="SDL2"/>
+      <libset libs="SDL2_image"/>
       <libset libs="stdc++"/>
       <fileset dir="./src/" includes="*.cpp"/>
     </cc>

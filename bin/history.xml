@@ -1,19 +1,23 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="gcc -lSDL2 -lstdc++">
-      <target file="main" lastModified="150aed52258">
-         <source file="../../../../../../../usr/local/lib/libSDL2.a" lastModified="150adf4c0f0"/>
-         <source file="../../../../../../../usr/local/lib/libSDL2-2.0.so.0.4.0" lastModified="150adf4c0f0"/>
-         <source file="main.o" lastModified="150aed4b110"/>
-         <source file="Game.o" lastModified="150aed51e70"/>
+   <processor signature="gcc -lSDL2 -lSDL2_image -lstdc++">
+      <target file="main" lastModified="150af9bcdb8">
+         <source file="../../../../../../usr/local/lib/libSDL2.a" lastModified="150adf4c0f0"/>
+         <source file="../../../../../../usr/local/lib/libSDL2-2.0.so.0.4.0" lastModified="150adf4c0f0"/>
+         <source file="main.o" lastModified="150af9bc9d0"/>
+         <source file="TextureManager.o" lastModified="150af9bcdb8"/>
+         <source file="Game.o" lastModified="150af9bcdb8"/>
       </target>
    </processor>
    <processor signature="g++ noversion nomachine -Wall -c">
-      <target file="Game.o" lastModified="150aed51e70">
-         <source file="../src/Game.cpp" lastModified="150aed50700"/>
+      <target file="TextureManager.o" lastModified="150af9bcdb8">
+         <source file="../src/TextureManager.cpp" lastModified="150af9af6e0"/>
       </target>
-      <target file="main.o" lastModified="150aed4b110">
-         <source file="../src/main.cpp" lastModified="150aed4a170"/>
+      <target file="Game.o" lastModified="150af9bcdb8">
+         <source file="../src/Game.cpp" lastModified="150af92f030"/>
+      </target>
+      <target file="main.o" lastModified="150af9bc9d0">
+         <source file="../src/main.cpp" lastModified="150af4d6f38"/>
       </target>
    </processor>
 </history>

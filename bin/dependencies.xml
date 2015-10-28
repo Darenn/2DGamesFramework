@@ -1,12 +1,24 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
    <includePath signature="">
-      <source file="../src/main.cpp" lastModified="150aed4a170">
+      <source file="../src/main.cpp" lastModified="150af4d6f38">
          <include file="../src/Game.h"/>
-         <sysinclude file="../../../../../../../usr/local/include/SDL2/SDL.h"/>
+         <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
       </source>
-      <source file="../src/Game.h" lastModified="150aed25f50">
-         <sysinclude file="../../../../../../../usr/local/include/SDL2/SDL.h"/>
+      <source file="../src/Game.cpp" lastModified="150af92f030">
+         <include file="../src/Game.h"/>
+      </source>
+      <source file="../src/TextureManager.cpp" lastModified="150af9af6e0">
+         <include file="../src/TextureManager.h"/>
+      </source>
+      <source file="../src/TextureManager.h" lastModified="150af9bc200">
+         <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
+         <sysinclude file="../../../../../../usr/include/SDL2/SDL_image.h"/>
+      </source>
+      <source file="../src/Game.h" lastModified="150af943c38">
+         <include file="../src/TextureManager.h"/>
+         <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
+         <sysinclude file="../../../../../../usr/include/SDL2/SDL_image.h"/>
       </source>
    </includePath>
 </dependencies>
