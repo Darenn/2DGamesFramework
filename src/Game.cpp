@@ -40,8 +40,9 @@ bool Game::init(const char* title, int posx, int posy,
     }
   std::cout << "Init succeeded" << std::endl;
 
-  TheTextureManager::Instance()->load("assets/animate-alpha.png",
-    "animate", m_pRenderer);
+  TheTextureManager::Instance()->load("assets/animate-alpha.png", "animate", m_pRenderer);
+  m_go.load(100, 100, 128, 82, "animate");
+  m_player.load(300, 300, 128, 82, "animate");
   m_bRunning = true;
   return true;
 }
@@ -49,10 +50,8 @@ bool Game::init(const char* title, int posx, int posy,
 void Game::render()
 {
   SDL_RenderClear(m_pRenderer);
-  TheTextureManager::Instance()->draw("animate", 0,0, 128, 82,
-			m_pRenderer);
-  TheTextureManager::Instance()->drawFrame("animate", 100,100, 128, 82,
-  1, m_currentFrame, m_pRenderer);
+  m_go.draw(m_pRenderer);
+  m_player.draw(m_pRenderer);
   SDL_RenderPresent(m_pRenderer);
 }
 
@@ -82,5 +81,6 @@ void Game::handleEvents()
 
 void Game::update()
 {
-  m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
+  m_go.update();
+  m_player.update();
 }

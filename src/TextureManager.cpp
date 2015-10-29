@@ -54,13 +54,3 @@ void TextureManager::drawFrame(std::string id, int x, int y, int
   SDL_RenderCopyEx(pRenderer, m_textureMap[id], &srcRect,
 		   &destRect, 0, 0, flip);
 }
-
-TextureManager* TextureManager::Instance()
-{
-  if(TextureManager::s_pInstance == 0)
-    {
-      TextureManager::s_pInstance = new TextureManager();
-      return TextureManager::s_pInstance;
-    }
-  return TextureManager::s_pInstance;
-}

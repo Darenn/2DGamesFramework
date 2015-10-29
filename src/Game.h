@@ -5,6 +5,8 @@
 #include <iostream>
 #include <SDL2/SDL_image.h>
 #include "TextureManager.h"
+//#include "GameObject.h"
+#include "Player.h"
 
 class Game
 {
@@ -25,6 +27,8 @@ class Game
   bool running() { return m_bRunning; }
  
   int m_currentFrame;
+  GameObject m_go;
+  Player m_player;
 
  private:
   

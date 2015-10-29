@@ -1,23 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
    <processor signature="gcc -lSDL2 -lSDL2_image -lstdc++">
-      <target file="main" lastModified="150af9bcdb8">
+      <target file="main" lastModified="150b27f0fb8">
          <source file="../../../../../../usr/local/lib/libSDL2.a" lastModified="150adf4c0f0"/>
          <source file="../../../../../../usr/local/lib/libSDL2-2.0.so.0.4.0" lastModified="150adf4c0f0"/>
-         <source file="main.o" lastModified="150af9bc9d0"/>
-         <source file="TextureManager.o" lastModified="150af9bcdb8"/>
-         <source file="Game.o" lastModified="150af9bcdb8"/>
+         <source file="Player.o" lastModified="150b27f0fb8"/>
+         <source file="main.o" lastModified="150b27f0fb8"/>
+         <source file="TextureManager.o" lastModified="150b27f0fb8"/>
+         <source file="GameObject.o" lastModified="150b27f0fb8"/>
+         <source file="Game.o" lastModified="150b27f0fb8"/>
       </target>
    </processor>
    <processor signature="g++ noversion nomachine -Wall -c">
-      <target file="TextureManager.o" lastModified="150af9bcdb8">
-         <source file="../src/TextureManager.cpp" lastModified="150af9af6e0"/>
+      <target file="TextureManager.o" lastModified="150b27f0fb8">
+         <source file="../src/TextureManager.cpp" lastModified="150b27b6a20"/>
       </target>
-      <target file="Game.o" lastModified="150af9bcdb8">
-         <source file="../src/Game.cpp" lastModified="150af92f030"/>
+      <target file="Game.o" lastModified="150b27f0fb8">
+         <source file="../src/Game.cpp" lastModified="150afd183b8"/>
       </target>
-      <target file="main.o" lastModified="150af9bc9d0">
-         <source file="../src/main.cpp" lastModified="150af4d6f38"/>
+      <target file="Player.o" lastModified="150b27f0fb8">
+         <source file="../src/Player.cpp" lastModified="150afbe49d8"/>
+      </target>
+      <target file="main.o" lastModified="150b27f0fb8">
+         <source file="../src/main.cpp" lastModified="150afc7ee98"/>
+      </target>
+      <target file="GameObject.o" lastModified="150b27f0fb8">
+         <source file="../src/GameObject.cpp" lastModified="150afb506c0"/>
       </target>
    </processor>
 </history>
