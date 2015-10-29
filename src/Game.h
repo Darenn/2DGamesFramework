@@ -7,6 +7,7 @@
 #include "TextureManager.h"
 #include "GameObject.h"
 #include <vector>
+#include "InputHandler.h"
 
 class Game
 {
@@ -20,6 +21,7 @@ class Game
   void update();
   void handleEvents();
   void clean();
+  void quit() { m_bRunning = false; };
   SDL_Renderer* getRenderer() const { return m_pRenderer; }
 
   // a function to access the private running variable

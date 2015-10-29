@@ -49,6 +49,7 @@ bool Game::init(const char* title, int posx, int posy,
   m_gameObjects.push_back(new Enemy(new LoaderParams(100, 100, 128, 82, "animate")));
   m_gameObjects.push_back(new Enemy(new LoaderParams(250, 250, 128, 82, "animate")));
   m_gameObjects.push_back(new Enemy(new LoaderParams(100, 150, 128, 82, "animate")));
+  TheInputHandler::Instance()->initialiseJoysticks();
   m_bRunning = true;
   return true;
 }
@@ -72,6 +73,7 @@ void Game::render()
 void Game::clean()
 {
   std::cout << "Cleaning game" << std::endl;
+  TheInputHandler::Instance()->clean();
   SDL_DestroyWindow(m_pWindow);
   SDL_DestroyRenderer(m_pRenderer);
   SDL_Quit();
@@ -79,18 +81,7 @@ void Game::clean()
 
 void Game::handleEvents()
 {
-  SDL_Event event;
-  if(SDL_PollEvent(&event))
-    {
-      switch (event.type)
-	{
-	case SDL_QUIT:
-	  m_bRunning = false;
-	  break;
-	default:
-	  break;
-	}
-    }
+  TheInputHandler::Instance()->update();
 }
 
 void Game::update()
