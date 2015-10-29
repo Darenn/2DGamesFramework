@@ -13,8 +13,8 @@
       <target file="SDLGameObject.o" lastModified="150b33a0700">
          <source file="../src/SDLGameObject.cpp" lastModified="150b339f760"/>
       </target>
-      <target file="main.o" lastModified="150b2f06758">
-         <source file="../src/main.cpp" lastModified="150b2b27bc8"/>
+      <target file="main.o" lastModified="150b33ec1f0">
+         <source file="../src/main.cpp" lastModified="150b33eb638"/>
       </target>
       <target file="TextureManager.o" lastModified="150b27f0fb8">
          <source file="../src/TextureManager.cpp" lastModified="150b27b6a20"/>
@@ -27,13 +27,13 @@
       </target>
    </processor>
    <processor signature="gcc -lSDL2 -lSDL2_image -lstdc++ -lm">
-      <target file="main" lastModified="150b33a0700">
+      <target file="main" lastModified="150b33ec1f0">
          <source file="../../../../../../usr/local/lib/libSDL2.a" lastModified="150adf4c0f0"/>
          <source file="../../../../../../usr/local/lib/libSDL2-2.0.so.0.4.0" lastModified="150adf4c0f0"/>
          <source file="Enemy.o" lastModified="150b3395738"/>
          <source file="Player.o" lastModified="150b3395738"/>
          <source file="SDLGameObject.o" lastModified="150b33a0700"/>
-         <source file="main.o" lastModified="150b2f06758"/>
+         <source file="main.o" lastModified="150b33ec1f0"/>
          <source file="TextureManager.o" lastModified="150b27f0fb8"/>
          <source file="GameObject.o" lastModified="150b2f06b40"/>
          <source file="Vector2D.o" lastModified="150b3315858"/>

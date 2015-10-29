@@ -33,9 +33,8 @@
       </source>
       <source file="../src/Vector2D.h" lastModified="150b3309508">
       </source>
-      <source file="../src/main.cpp" lastModified="150b2b27bc8">
-         <include file="../src/Game.h"/>
-         <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
+      <source file="../src/SDLGameObject.cpp" lastModified="150b339f760">
+         <include file="../src/SDLGameObject.h"/>
       </source>
       <source file="../src/Player.cpp" lastModified="150b337f3c0">
          <include file="../src/Player.h"/>
