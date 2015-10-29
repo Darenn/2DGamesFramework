@@ -1,36 +1,48 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
    <includePath signature="">
+      <source file="../src/LoaderParams.h" lastModified="150b2f04c00">
+      </source>
       <source file="../src/TextureManager.cpp" lastModified="150b27b6a20">
          <include file="../src/TextureManager.h"/>
       </source>
-      <source file="../src/Game.h" lastModified="150b29f16f0">
+      <source file="../src/Game.h" lastModified="150b2eda838">
          <include file="../src/TextureManager.h"/>
          <include file="../src/GameObject.h"/>
-         <include file="../src/Player.h"/>
-         <include file="../src/Enemy.h"/>
          <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
          <sysinclude file="../../../../../../usr/include/SDL2/SDL_image.h"/>
       </source>
-      <source file="../src/GameObject.cpp" lastModified="150b2a43770">
+      <source file="../src/SDLGameObject.h" lastModified="150b2e981b8">
+         <include file="../src/GameObject.h"/>
+         <include file="../src/LoaderParams.h"/>
+         <include file="../src/Game.h"/>
+      </source>
+      <source file="../src/GameObject.cpp" lastModified="150b2e35b80">
          <include file="../src/GameObject.h"/>
       </source>
-      <source file="../src/Player.h" lastModified="150b2a75c20">
-         <include file="../src/GameObject.h"/>
+      <source file="../src/Player.h" lastModified="150b2f3d640">
+         <include file="../src/SDLGameObject.h"/>
+         <include file="../src/LoaderParams.h"/>
       </source>
-      <source file="../src/main.cpp" lastModified="150afc7ee98">
+      <source file="../src/main.cpp" lastModified="150b2b27bc8">
          <include file="../src/Game.h"/>
          <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
       </source>
-      <source file="../src/Player.cpp" lastModified="150b2a73ce0">
+      <source file="../src/Game.cpp" lastModified="150b2f30b20">
+         <include file="../src/Game.h"/>
+         <include file="../src/Player.h"/>
+         <include file="../src/Enemy.h"/>
+      </source>
+      <source file="../src/Player.cpp" lastModified="150b2bcf760">
          <include file="../src/Player.h"/>
       </source>
-      <source file="../src/GameObject.h" lastModified="150b2a41c18">
-         <include file="../src/TextureManager.h"/>
-         <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
+      <source file="../src/SDLGameObject.cpp" lastModified="150b2e88f88">
+         <include file="../src/SDLGameObject.h"/>
       </source>
-      <source file="../src/Enemy.h" lastModified="150b2a911a0">
-         <include file="../src/GameObject.h"/>
+      <source file="../src/GameObject.h" lastModified="150b2e4ce98">
+         <include file="../src/TextureManager.h"/>
+         <include file="../src/LoaderParams.h"/>
+         <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
       </source>
       <source file="../src/TextureManager.h" lastModified="150b27ed138">
          <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
