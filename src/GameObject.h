@@ -1,3 +1,6 @@
+#ifndef __GAMEOBJECT__
+#define __GAMEOBJECT__
+
 #include <string>
 #include <SDL2/SDL.h>
 #include "TextureManager.h"
@@ -5,11 +8,12 @@
 class GameObject
 {
  public:
-  void load(int x, int y, int width, int height, std::string
-	    textureID);
-  void draw(SDL_Renderer* pRenderer);
-  void update(){};
-  void clean(){};
+  virtual void load(int x, int y, int width, int height,
+		    std::string	textureID);
+  virtual void draw(SDL_Renderer* pRenderer);
+  virtual void update(){};
+  virtual void clean(){};
+
  protected:
   std::string m_textureID;
   int m_currentFrame;
@@ -19,3 +23,5 @@ class GameObject
   int m_width;
   int m_height;
 };
+
+#endif

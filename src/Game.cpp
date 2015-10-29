@@ -40,18 +40,36 @@ bool Game::init(const char* title, int posx, int posy,
     }
   std::cout << "Init succeeded" << std::endl;
 
+  m_player = new Player();
+  m_enemy1 = new Enemy();
+  m_enemy2 = new Enemy();
+  m_enemy3 = new Enemy();
+  m_gameObjects.push_back(m_player);
+  m_gameObjects.push_back(m_enemy1);
+  m_gameObjects.push_back(m_enemy2);
+  m_gameObjects.push_back(m_enemy3);
   TheTextureManager::Instance()->load("assets/animate-alpha.png", "animate", m_pRenderer);
-  m_go.load(100, 100, 128, 82, "animate");
-  m_player.load(300, 300, 128, 82, "animate");
+  m_player->load(0, 0, 128, 82, "animate");
+  m_enemy1->load(100, 100, 128, 82, "animate");
+  m_enemy2->load(250, 250, 128, 82, "animate");
+  m_enemy3->load(100, 150, 128, 82, "animate");
   m_bRunning = true;
   return true;
+}
+
+void Game::draw()
+{
+  for(std::vector<GameObject*>::size_type i = 0;
+      i < m_gameObjects.size(); i++)
+    {
+      m_gameObjects[i]->draw(m_pRenderer);
+    }
 }
 
 void Game::render()
 {
   SDL_RenderClear(m_pRenderer);
-  m_go.draw(m_pRenderer);
-  m_player.draw(m_pRenderer);
+  Game::draw();
   SDL_RenderPresent(m_pRenderer);
 }
 
@@ -81,6 +99,11 @@ void Game::handleEvents()
 
 void Game::update()
 {
-  m_go.update();
-  m_player.update();
+  for(std::vector<GameObject*>::size_type i = 0; i !=
+	m_gameObjects.size(); i++)
+    {
+      m_gameObjects[i]->update();
+    }
 }
+ 
+
