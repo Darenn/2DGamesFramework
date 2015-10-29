@@ -38,16 +38,16 @@
          <include file="../src/Game.h"/>
          <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
       </source>
-      <source file="../src/SDLGameObject.cpp" lastModified="150b339f760">
-         <include file="../src/SDLGameObject.h"/>
-      </source>
-      <source file="../src/Player.cpp" lastModified="150b53c4b58">
-         <include file="../src/Player.h"/>
-      </source>
       <source file="../src/Game.cpp" lastModified="150b4589660">
          <include file="../src/Game.h"/>
          <include file="../src/Player.h"/>
          <include file="../src/Enemy.h"/>
+      </source>
+      <source file="../src/Player.cpp" lastModified="150b53c4b58">
+         <include file="../src/Player.h"/>
+      </source>
+      <source file="../src/SDLGameObject.cpp" lastModified="150b339f760">
+         <include file="../src/SDLGameObject.h"/>
       </source>
       <source file="../src/GameObject.h" lastModified="150b2e4ce98">
          <include file="../src/TextureManager.h"/>
@@ -62,7 +62,7 @@
          <include file="../src/SDLGameObject.h"/>
          <include file="../src/LoaderParams.h"/>
       </source>
-      <source file="../src/InputHandler.h" lastModified="150b53da318">
+      <source file="../src/InputHandler.h" lastModified="150b54da8a8">
          <include file="../src/Vector2D.h"/>
          <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
       </source>

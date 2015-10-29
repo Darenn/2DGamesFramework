@@ -82,64 +82,57 @@ bool InputHandler::isKeyDown(SDL_Scancode key)
   return false;
 }
 
-void InputHandler::update()
-{
-  m_keystates = (Uint8*) SDL_GetKeyboardState(0);
-  SDL_Event event;
-  while(SDL_PollEvent(&event))
-    {
-      if(event.type == SDL_MOUSEMOTION)
-	{
-	  m_mousePosition.setX(event.motion.x);
-	  m_mousePosition.setY(event.motion.y);
-	}
-      if(event.type == SDL_MOUSEBUTTONDOWN)
-	{
-	  if(event.button.button == SDL_BUTTON_LEFT)
-	    {
-	      m_mouseButtonStates[LEFT] = true;
-	    }
-	  if(event.button.button == SDL_BUTTON_MIDDLE)
-	    {
-	      m_mouseButtonStates[MIDDLE] = true;
-	    }
-	  if(event.button.button == SDL_BUTTON_RIGHT)
-	    {
-	      m_mouseButtonStates[RIGHT] = true;
-	    }
-	}
-      if(event.type == SDL_MOUSEBUTTONUP)
-	{
-	  if(event.button.button == SDL_BUTTON_LEFT)
-	    {
-	      m_mouseButtonStates[LEFT] = false;
-	    }
-	  if(event.button.button == SDL_BUTTON_MIDDLE)
-	    {
-	      m_mouseButtonStates[MIDDLE] = false;
-	    }
-	  if(event.button.button == SDL_BUTTON_RIGHT)
-	    {
-	      m_mouseButtonStates[RIGHT] = false;
-	    }
-	}
-      if(event.type == SDL_QUIT)
-	{
-	  TheGame::Instance()->quit();
-	}
-      
-      if(event.type == SDL_JOYBUTTONDOWN)
-	{
-	  int whichOne = event.jaxis.which;
-	  m_buttonStates[whichOne][event.jbutton.button] = true;
-	}
-      if(event.type == SDL_JOYBUTTONUP)
-	{
-	  int whichOne = event.jaxis.which;
-	  m_buttonStates[whichOne][event.jbutton.button] = false;
-	}
+void InputHandler::onKeyDown() {  
+}
 
-      if(event.type == SDL_JOYAXISMOTION) // check the type value
+void InputHandler::onKeyUp() {}
+
+void InputHandler::onMouseMove(SDL_Event& event) {
+  if(event.type == SDL_MOUSEMOTION)
+    {
+      m_mousePosition.setX(event.motion.x);
+      m_mousePosition.setY(event.motion.y);
+    }
+}
+
+void InputHandler::onMouseButtonDown(SDL_Event& event) {
+  if(event.type == SDL_MOUSEBUTTONDOWN)
+    {
+      if(event.button.button == SDL_BUTTON_LEFT)
+	{
+	  m_mouseButtonStates[LEFT] = true;
+	}
+      if(event.button.button == SDL_BUTTON_MIDDLE)
+	{
+	  m_mouseButtonStates[MIDDLE] = true;
+	}
+      if(event.button.button == SDL_BUTTON_RIGHT)
+	{
+	  m_mouseButtonStates[RIGHT] = true;
+	}
+    }
+}
+
+void InputHandler::onMouseButtonUp(SDL_Event& event) {
+  if(event.type == SDL_MOUSEBUTTONUP)
+    {
+      if(event.button.button == SDL_BUTTON_LEFT)
+	{
+	  m_mouseButtonStates[LEFT] = false;
+	}
+      if(event.button.button == SDL_BUTTON_MIDDLE)
+	{
+	  m_mouseButtonStates[MIDDLE] = false;
+	}
+      if(event.button.button == SDL_BUTTON_RIGHT)
+	{
+	  m_mouseButtonStates[RIGHT] = false;
+	}
+    }
+}
+
+void InputHandler::onJoystickAxisMove(SDL_Event& event) {
+   if(event.type == SDL_JOYAXISMOTION) // check the type value
 	{
 	  int whichOne = event.jaxis.which; // get which controller
 	  // left stick move left or right
@@ -207,6 +200,62 @@ void InputHandler::update()
 		  m_joystickValues[whichOne].second->setY(0);
 		}
 	    }
+	}
+}
+
+void InputHandler::onJoystickButtonDown(SDL_Event& event) {
+  if(event.type == SDL_JOYBUTTONDOWN)
+    {
+      int whichOne = event.jaxis.which;
+      m_buttonStates[whichOne][event.jbutton.button] = true;
+    }
+}
+
+void InputHandler::onJoystickButtonUp(SDL_Event& event) {
+  if(event.type == SDL_JOYBUTTONUP)
+    {
+      int whichOne = event.jaxis.which;
+      m_buttonStates[whichOne][event.jbutton.button] = false;
+    }
+}
+
+void InputHandler::update()
+{
+  m_keystates = (Uint8*) SDL_GetKeyboardState(0);
+  SDL_Event event;
+  while(SDL_PollEvent(&event))
+    {
+      switch (event.type)
+	{
+	case SDL_QUIT:
+	  TheGame::Instance()->quit();
+	  break;
+	case SDL_JOYAXISMOTION:
+	  onJoystickAxisMove(event);
+	  break;
+	case SDL_JOYBUTTONDOWN:
+	  onJoystickButtonDown(event);
+	  break;
+	case SDL_JOYBUTTONUP:
+	  onJoystickButtonUp(event);
+	  break;
+	case SDL_MOUSEMOTION:
+	  onMouseMove(event);
+	  break;
+	case SDL_MOUSEBUTTONDOWN:
+	  onMouseButtonDown(event);
+	  break;
+	case SDL_MOUSEBUTTONUP:
+	  onMouseButtonUp(event);
+	  break;
+	case SDL_KEYDOWN:
+	  onKeyDown();
+	  break;
+	case SDL_KEYUP:
+	  onKeyUp();
+	  break;
+	default:
+	  break;
 	}
     }
 }
