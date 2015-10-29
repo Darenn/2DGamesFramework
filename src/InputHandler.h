@@ -46,6 +46,8 @@ Vector2D* getMousePosition()
 {
 return &m_mousePosition;
 }
+Uint8* m_keystates;
+bool isKeyDown(SDL_Scancode key);
 private:
 Vector2D m_mousePosition;
 InputHandler();

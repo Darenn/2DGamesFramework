@@ -20,7 +20,7 @@ void Player::clean()
 
 void Player::handleInput()
 {
-  Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
+  /*Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
   m_velocity = (*vec - m_position) / 100;
   if(TheInputHandler::Instance()->getMouseButtonState(LEFT))
     {
@@ -30,7 +30,27 @@ void Player::handleInput()
     {
       std::cout << "passe fans le if" << std::endl;
       m_velocity.setX(1);
+      }*/
+
+  // test keyboard
+  if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_RIGHT))
+    {
+      m_velocity.setX(2);
     }
+  if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_LEFT))
+    {
+      m_velocity.setX(-2);
+    }
+  if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_UP))
+    {
+      m_velocity.setY(-2);
+    }
+  if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_DOWN))
+    {
+      m_velocity.setY(2);
+    }
+
+  // test joystick
   if(TheInputHandler::Instance()->joysticksInitialised())
     {
       if(TheInputHandler::Instance()->xvalue(0, 1) > 0 ||

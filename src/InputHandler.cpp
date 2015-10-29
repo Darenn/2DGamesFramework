@@ -66,8 +66,25 @@ void InputHandler::clean()
     }
 }
 
+bool InputHandler::isKeyDown(SDL_Scancode key)
+{
+  if(m_keystates != 0)
+    {
+      if(m_keystates[key] == 1)
+	{
+	  return true;
+	}
+      else
+	{
+	  return false;
+	}
+    }
+  return false;
+}
+
 void InputHandler::update()
 {
+  m_keystates = (Uint8*) SDL_GetKeyboardState(0);
   SDL_Event event;
   while(SDL_PollEvent(&event))
     {

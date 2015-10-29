@@ -7,41 +7,41 @@
       <target file="GameObject.o" lastModified="150b47c4718">
          <source file="../src/GameObject.cpp" lastModified="150b2e35b80"/>
       </target>
-      <target file="Enemy.o" lastModified="150b533bbf0">
+      <target file="Enemy.o" lastModified="150b53db6a0">
          <source file="../src/Enemy.cpp" lastModified="150b30c9a18"/>
       </target>
-      <target file="SDLGameObject.o" lastModified="150b533bfd8">
+      <target file="SDLGameObject.o" lastModified="150b53dba88">
          <source file="../src/SDLGameObject.cpp" lastModified="150b339f760"/>
       </target>
-      <target file="InputHandler.o" lastModified="150b537fdc8">
-         <source file="../src/InputHandler.cpp" lastModified="150b537f210"/>
+      <target file="InputHandler.o" lastModified="150b540cbb0">
+         <source file="../src/InputHandler.cpp" lastModified="150b540bc10"/>
       </target>
-      <target file="main.o" lastModified="150b533bfd8">
+      <target file="main.o" lastModified="150b53dba88">
          <source file="../src/main.cpp" lastModified="150b33eb638"/>
       </target>
       <target file="TextureManager.o" lastModified="150b47c4718">
          <source file="../src/TextureManager.cpp" lastModified="150b27b6a20"/>
       </target>
-      <target file="Game.o" lastModified="150b533c3c0">
+      <target file="Game.o" lastModified="150b53dbe70">
          <source file="../src/Game.cpp" lastModified="150b4589660"/>
       </target>
-      <target file="Player.o" lastModified="150b533bbf0">
-         <source file="../src/Player.cpp" lastModified="150b52af9c0"/>
+      <target file="Player.o" lastModified="150b53db6a0">
+         <source file="../src/Player.cpp" lastModified="150b53c4b58"/>
       </target>
    </processor>
    <processor signature="gcc -lSDL2 -lSDL2_image -lstdc++ -lm">
-      <target file="main" lastModified="150b537fdc8">
+      <target file="main" lastModified="150b540cf98">
          <source file="../../../../../../usr/local/lib/libSDL2.a" lastModified="150adf4c0f0"/>
          <source file="../../../../../../usr/local/lib/libSDL2-2.0.so.0.4.0" lastModified="150adf4c0f0"/>
-         <source file="Enemy.o" lastModified="150b533bbf0"/>
-         <source file="Player.o" lastModified="150b533bbf0"/>
-         <source file="SDLGameObject.o" lastModified="150b533bfd8"/>
-         <source file="main.o" lastModified="150b533bfd8"/>
+         <source file="Enemy.o" lastModified="150b53db6a0"/>
+         <source file="Player.o" lastModified="150b53db6a0"/>
+         <source file="SDLGameObject.o" lastModified="150b53dba88"/>
+         <source file="main.o" lastModified="150b53dba88"/>
          <source file="TextureManager.o" lastModified="150b47c4718"/>
          <source file="GameObject.o" lastModified="150b47c4718"/>
-         <source file="InputHandler.o" lastModified="150b537fdc8"/>
+         <source file="InputHandler.o" lastModified="150b540cbb0"/>
          <source file="Vector2D.o" lastModified="150b47c4b00"/>
-         <source file="Game.o" lastModified="150b533c3c0"/>
+         <source file="Game.o" lastModified="150b53dbe70"/>
       </target>
    </processor>
 </history>
