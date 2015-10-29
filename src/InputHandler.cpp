@@ -3,6 +3,9 @@
 
 InputHandler* InputHandler::s_pInstance = 0;
 
+InputHandler::InputHandler() : m_mousePosition(0,0){ // i initialise this because it will be NULL if there is not mousemotion
+}
+
 bool InputHandler::getButtonState(int joy, int buttonNumber)
 {
   if (joy < SDL_NumJoysticks()) {
@@ -13,6 +16,10 @@ bool InputHandler::getButtonState(int joy, int buttonNumber)
 
 void InputHandler::initialiseJoysticks()
 {
+  for(int i = 0; i < 3; i++)
+    {
+      m_mouseButtonStates.push_back(false);
+    }
   if(SDL_WasInit(SDL_INIT_JOYSTICK) == 0)
     {
       SDL_InitSubSystem(SDL_INIT_JOYSTICK);
@@ -64,6 +71,41 @@ void InputHandler::update()
   SDL_Event event;
   while(SDL_PollEvent(&event))
     {
+      if(event.type == SDL_MOUSEMOTION)
+	{
+	  m_mousePosition.setX(event.motion.x);
+	  m_mousePosition.setY(event.motion.y);
+	}
+      if(event.type == SDL_MOUSEBUTTONDOWN)
+	{
+	  if(event.button.button == SDL_BUTTON_LEFT)
+	    {
+	      m_mouseButtonStates[LEFT] = true;
+	    }
+	  if(event.button.button == SDL_BUTTON_MIDDLE)
+	    {
+	      m_mouseButtonStates[MIDDLE] = true;
+	    }
+	  if(event.button.button == SDL_BUTTON_RIGHT)
+	    {
+	      m_mouseButtonStates[RIGHT] = true;
+	    }
+	}
+      if(event.type == SDL_MOUSEBUTTONUP)
+	{
+	  if(event.button.button == SDL_BUTTON_LEFT)
+	    {
+	      m_mouseButtonStates[LEFT] = false;
+	    }
+	  if(event.button.button == SDL_BUTTON_MIDDLE)
+	    {
+	      m_mouseButtonStates[MIDDLE] = false;
+	    }
+	  if(event.button.button == SDL_BUTTON_RIGHT)
+	    {
+	      m_mouseButtonStates[RIGHT] = false;
+	    }
+	}
       if(event.type == SDL_QUIT)
 	{
 	  TheGame::Instance()->quit();

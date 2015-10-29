@@ -20,6 +20,12 @@ void Player::clean()
 
 void Player::handleInput()
 {
+  Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
+  m_velocity = (*vec - m_position) / 100;
+  if(TheInputHandler::Instance()->getMouseButtonState(LEFT))
+    {
+      m_velocity.setX(1);
+    }      
   if(TheInputHandler::Instance()->getButtonState(0, 3))
     {
       std::cout << "passe fans le if" << std::endl;
