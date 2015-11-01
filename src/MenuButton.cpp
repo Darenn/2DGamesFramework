@@ -38,7 +38,6 @@ void MenuButton::update()
     {
       m_currentFrame = MOUSE_OUT;
     }
-  std::cout << "fini update button" << std::endl;
 }
 
 void MenuButton::clean()

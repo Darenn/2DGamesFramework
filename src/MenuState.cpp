@@ -10,12 +10,9 @@ const std::string MenuState::s_menuID = "MENU";
 void MenuState::update()
 {
   for(unsigned int i = 0; i < m_gameObjects.size(); i++)
-    {      
-      std::cout << "menu objects" << m_gameObjects.size() << std::endl;
+    {       
       m_gameObjects[i]->update();     
-      std::cout << "menu objects after" << m_gameObjects.size() << std::endl;
     }
-  std::cout << "fini update menu" << std::endl;
 }
 
 void MenuState::render()
@@ -67,7 +64,6 @@ void MenuState::s_menuToPlay()
 {
   TheGame::Instance()->getStateMachine()
   ->changeState(new PlayState());  
-  std::cout << "fini menu_to_play" << std::endl;
 }
 
 void MenuState::s_exitFromMenu()
