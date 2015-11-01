@@ -10,7 +10,8 @@ void Player::draw()
 }
 void Player::update()
 {
-  m_currentFrame = int(((SDL_GetTicks() / 100) % 6));
+  // to modify because 5 is the number of pictures
+  m_currentFrame = int(((SDL_GetTicks() / 100) % 5));
   handleInput(); // add our function
   SDLGameObject::update();
 }
@@ -20,6 +21,11 @@ void Player::clean()
 
 void Player::handleInput()
 {
+  
+  Vector2D* target = TheInputHandler::Instance()
+    ->getMousePosition();
+  m_velocity = *target - m_position;
+  m_velocity /= 50;
   /*Vector2D* vec = TheInputHandler::Instance()->getMousePosition();
   m_velocity = (*vec - m_position) / 100;
   if(TheInputHandler::Instance()->getMouseButtonState(LEFT))

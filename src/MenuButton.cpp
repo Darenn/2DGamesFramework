@@ -24,8 +24,8 @@ void MenuButton::update()
       if(TheInputHandler::Instance()->getMouseButtonState(LEFT) && m_bReleased)
 	{
 	  m_currentFrame = CLICKED;
-	  m_callback();
 	  m_bReleased = false;
+	  m_callback();
 	}
       else if(!TheInputHandler::Instance()
 	      ->getMouseButtonState(LEFT))
@@ -38,6 +38,7 @@ void MenuButton::update()
     {
       m_currentFrame = MOUSE_OUT;
     }
+  std::cout << "fini update button" << std::endl;
 }
 
 void MenuButton::clean()

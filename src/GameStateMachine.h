@@ -25,6 +25,7 @@ void render();
 private:
 // will store states, the back will contains the current state
 std::vector<GameState*> m_gameStates;
+
 };
 
 #endif

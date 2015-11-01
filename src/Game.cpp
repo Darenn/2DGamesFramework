@@ -25,7 +25,7 @@ bool Game::init(const char* title, int posx, int posy,
 	    {
 	      std::cout << "SDL_CreateRenderer succeeded" << std::endl;
 	      SDL_SetRenderDrawColor(m_pRenderer,
-				     255,0 , 0,255);
+				     0,0 , 0,255);
 	    }
 	  else
 	    {
@@ -47,11 +47,12 @@ bool Game::init(const char* title, int posx, int posy,
   std::cout << "Init succeeded" << std::endl;
 
   // Test area
-  TheTextureManager::Instance()->load("assets/animate-alpha.png", "animate", m_pRenderer);  
+   TheTextureManager::Instance()->load("assets/animate-alpha.png", "animate", m_pRenderer);  
+   /*
   m_gameObjects.push_back(new Player(new LoaderParams(0, 0, 128, 82, "animate")));
   m_gameObjects.push_back(new Enemy(new LoaderParams(100, 100, 128, 82, "animate")));
   m_gameObjects.push_back(new Enemy(new LoaderParams(250, 250, 128, 82, "animate")));
-  m_gameObjects.push_back(new Enemy(new LoaderParams(100, 150, 128, 82, "animate")));
+  m_gameObjects.push_back(new Enemy(new LoaderParams(100, 150, 128, 82, "animate")));*/
   TheInputHandler::Instance()->initialiseJoysticks();
   m_pGameStateMachine = new GameStateMachine();
   m_pGameStateMachine->changeState(new MenuState());
