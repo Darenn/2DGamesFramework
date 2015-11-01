@@ -38,7 +38,8 @@ class Game
       }
     return s_pInstance;
   }
-
+  GameStateMachine* getStateMachine(){ return m_pGameStateMachine; }
+  
  private:
   
   void draw();

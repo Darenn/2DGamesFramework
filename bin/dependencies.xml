@@ -1,12 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
    <includePath signature="">
-      <source file="../src/MenuState.cpp" lastModified="150c4018f40">
-         <include file="../src/MenuState.h"/>
-         <include file="../src/TextureManager.h"/>
-         <include file="../src/Game.h"/>
-         <include file="../src/MenuButton.h"/>
-      </source>
       <source file="../src/InputHandler.cpp" lastModified="150b551fa20">
          <include file="../src/InputHandler.h"/>
          <include file="../src/Game.h"/>
@@ -20,15 +14,15 @@
       </source>
       <source file="../src/Vector2D.h" lastModified="150b3309508">
       </source>
+      <source file="../src/TextureManager.h" lastModified="150bf344408">
+         <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
+         <sysinclude file="../../../../../../usr/include/SDL2/SDL_image.h"/>
+      </source>
       <source file="../src/SDLGameObject.h" lastModified="150b45c0d18">
          <include file="../src/GameObject.h"/>
          <include file="../src/LoaderParams.h"/>
          <include file="../src/Game.h"/>
          <include file="../src/Vector2D.h"/>
-      </source>
-      <source file="../src/TextureManager.h" lastModified="150bf344408">
-         <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
-         <sysinclude file="../../../../../../usr/include/SDL2/SDL_image.h"/>
       </source>
       <source file="../src/TextureManager.cpp" lastModified="150bf32c538">
          <include file="../src/TextureManager.h"/>
@@ -53,6 +47,9 @@
       </source>
       <source file="../src/GameState.h" lastModified="150bf17f208">
       </source>
+      <source file="../src/MenuButton.cpp" lastModified="150c404bbc0">
+         <include file="../src/MenuButton.h"/>
+      </source>
       <source file="../src/Game.cpp" lastModified="150bf1ee748">
          <include file="../src/Game.h"/>
          <include file="../src/Player.h"/>
@@ -63,6 +60,10 @@
       <source file="../src/GameStateMachine.h" lastModified="150bf1d6878">
          <include file="../src/GameState.h"/>
       </source>
+      <source file="../src/MenuState.h" lastModified="150c3fe3bb0">
+         <include file="../src/GameState.h"/>
+         <include file="../src/GameObject.h"/>
+      </source>
       <source file="../src/GameState.cpp" lastModified="150bf2c4140">
       </source>
       <source file="../src/SDLGameObject.cpp" lastModified="150b339f760">
@@ -72,11 +73,7 @@
          <include file="../src/Game.h"/>
          <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
       </source>
-      <source file="../src/MenuState.h" lastModified="150c3fe3bb0">
-         <include file="../src/GameState.h"/>
-         <include file="../src/GameObject.h"/>
-      </source>
-      <source file="../src/Game.h" lastModified="150bf0d7288">
+      <source file="../src/Game.h" lastModified="150c407b960">
          <include file="../src/TextureManager.h"/>
          <include file="../src/GameObject.h"/>
          <include file="../src/InputHandler.h"/>
