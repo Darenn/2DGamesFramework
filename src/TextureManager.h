@@ -29,7 +29,7 @@ class TextureManager
       }
     return TextureManager::s_pInstance;
   }
-
+  void clearFromTextureMap(std::string id);
  private:
   TextureManager() {};
   static TextureManager* s_pInstance;  

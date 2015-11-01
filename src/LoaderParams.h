@@ -1,6 +1,8 @@
 #ifndef __LOADERPARAMS__
 #define __LOADERPARAMS__
 
+#include <string>
+
 class LoaderParams
 {
 

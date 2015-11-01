@@ -2,21 +2,20 @@
 #define __GAME__
 
 #include <SDL2/SDL.h>
-#include <iostream>
 #include <SDL2/SDL_image.h>
+#include <iostream>
+#include <vector>
 #include "TextureManager.h"
 #include "GameObject.h"
-#include <vector>
 #include "InputHandler.h"
+#include "GameStateMachine.h"
 
 class Game
 {
   
  public:
   ~Game() {};
-  // simply set the running variable to true
-  bool init(const char* title, int posx, int posy, int width, int height, bool fullscreen);
-  
+  bool init(const char* title, int posx, int posy, int width, int height, bool fullscreen);  
   void render();
   void update();
   void handleEvents();
@@ -50,6 +49,7 @@ class Game
   // create the s_pInstance member variable
   static Game* s_pInstance;
   // create the typedef
+  GameStateMachine* m_pGameStateMachine;
   
 };
 
