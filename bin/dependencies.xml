@@ -78,6 +78,9 @@
       </source>
       <source file="../src/GameState.cpp" lastModified="150bf2c4140">
       </source>
+      <source file="../src/SDLGameObject.cpp" lastModified="150c798b7f0">
+         <include file="../src/SDLGameObject.h"/>
+      </source>
       <source file="../src/MenuState.h" lastModified="150c3fe3bb0">
          <include file="../src/GameState.h"/>
          <include file="../src/GameObject.h"/>

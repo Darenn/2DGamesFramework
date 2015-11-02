@@ -31,6 +31,9 @@
       <target file="MenuState.o" lastModified="150c797a680">
          <source file="../src/MenuState.cpp" lastModified="150c4dab518"/>
       </target>
+      <target file="GameOverState.o" lastModified="150c7a104f0">
+         <source file="../src/GameOverState.cpp" lastModified="150c7a0fd20"/>
+      </target>
       <target file="InputHandler.o" lastModified="150c797b238">
          <source file="../src/InputHandler.cpp" lastModified="150c4d74e00"/>
       </target>
@@ -54,7 +57,7 @@
       </target>
    </processor>
    <processor signature="gcc -lSDL2 -lSDL2_image -lstdc++ -lm">
-      <target file="main" lastModified="150c798bfc0">
+      <target file="main" lastModified="150c7a108d8">
          <source file="../../../../../../usr/local/lib/libSDL2.a" lastModified="150adf4c0f0"/>
          <source file="../../../../../../usr/local/lib/libSDL2-2.0.so.0.4.0" lastModified="150adf4c0f0"/>
          <source file="PauseState.o" lastModified="150c7985a30"/>
@@ -66,6 +69,7 @@
          <source file="GameState.o" lastModified="150bf334238"/>
          <source file="main.o" lastModified="150c797ae50"/>
          <source file="PlayState.o" lastModified="150c797ae50"/>
+         <source file="GameOverState.o" lastModified="150c7a104f0"/>
          <source file="TextureManager.o" lastModified="150bf34ad80"/>
          <source file="GameObject.o" lastModified="150c797ae50"/>
          <source file="InputHandler.o" lastModified="150c797b238"/>
