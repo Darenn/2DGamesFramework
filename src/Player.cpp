@@ -11,7 +11,7 @@ void Player::draw()
 void Player::update()
 {
   // to modify because 5 is the number of pictures
-  m_currentFrame = int(((SDL_GetTicks() / 100) % 5));
+  m_currentFrame = int(((SDL_GetTicks() / 100) % m_numberFrames));
   handleInput(); // add our function
   SDLGameObject::update();
 }

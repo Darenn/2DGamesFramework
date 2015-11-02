@@ -11,7 +11,7 @@ class Enemy : public SDLGameObject
   Enemy(const LoaderParams* pParams);
   virtual void draw();
   virtual void update();
-  virtual void clean();
+  virtual void clean();  
 };
 
 #endif

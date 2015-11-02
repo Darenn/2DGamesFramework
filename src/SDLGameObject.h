@@ -23,6 +23,7 @@ int m_width;
 int m_height;
 int m_currentRow;
 int m_currentFrame;
+  int m_numberFrames;
 std::string m_textureID;
 };
 

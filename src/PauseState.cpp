@@ -17,14 +17,14 @@ void PauseState::s_resumePlay()
 }
 void PauseState::update()
 {
-  for(int i = 0; i < m_gameObjects.size(); i++)
+  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
     {
       m_gameObjects[i]->update();
     }
 }
 void PauseState::render()
 {
-  for(int i = 0; i < m_gameObjects.size(); i++)
+  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
     {
       m_gameObjects[i]->draw();
     }
@@ -52,7 +52,7 @@ bool PauseState::onEnter()
 }
 bool PauseState::onExit()
 {
-  for(int i = 0; i < m_gameObjects.size(); i++)
+  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
     {
       m_gameObjects[i]->clean();
     }

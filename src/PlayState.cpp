@@ -2,6 +2,7 @@
 #include "Game.h"
 #include "LoaderParams.h"
 #include "Player.h"
+#include "Enemy.h"
 #include <iostream>
 #include "TextureManager.h"
 #include "PauseState.h"
@@ -32,11 +33,17 @@ void PlayState::render()
 bool PlayState::onEnter()
 {
   if (!TheTextureManager::Instance()->load("assets/heli.png",
-					  "helicopter", TheGame::Instance()->getRenderer()))
+					   "helicopter", TheGame::Instance()->getRenderer()))
     {
       return false;
-      }  
+    }  
+  if (!TheTextureManager::Instance()->load("assets/heli2.png",
+					   "helicopter2", TheGame::Instance()->getRenderer()))
+    {
+      return false;
+    }
   m_gameObjects.push_back(new Player(new LoaderParams(100, 100, 128,55, "helicopter")));
+  m_gameObjects.push_back(new Enemy(new LoaderParams(400, 100, 128,55, "helicopter2")));
   std::cout << "entering PlayState\n";
   return true;
 }

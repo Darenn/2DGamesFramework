@@ -1,4 +1,5 @@
 #include "SDLGameObject.h"
+#include <iostream>
 
 SDLGameObject::SDLGameObject(const LoaderParams* pParams) :
   GameObject(pParams), m_position(pParams->getX(), pParams->getY()), 
@@ -7,6 +8,7 @@ SDLGameObject::SDLGameObject(const LoaderParams* pParams) :
   m_width = pParams->getWidth();
   m_height = pParams->getHeight();
   m_textureID = pParams->getTextureID();
+  m_numberFrames = pParams->getNumberFrames();
   m_currentRow = 1;
   m_currentFrame = 1;
 }
