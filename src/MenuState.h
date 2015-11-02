@@ -3,6 +3,7 @@
 
 #include "GameState.h"
 #include "GameObject.h"
+#include <string>
 #include <vector>
 
 class MenuState : public GameState

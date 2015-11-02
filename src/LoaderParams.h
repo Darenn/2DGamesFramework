@@ -2,6 +2,7 @@
 #define __LOADERPARAMS__
 
 #include <string>
+#include <iostream>
 
 class LoaderParams
 {
@@ -12,7 +13,7 @@ public:
      m_height(height), m_textureID(textureID), m_numberFrames(5) {};
   LoaderParams(int x, int y, int width, int height, std::string textureID, int numberFrames)
    : m_x(x), m_y(y), m_width(width), 
-     m_height(height), m_textureID(textureID), m_numberFrames(numberFrames) {};
+     m_height(height), m_textureID(textureID), m_numberFrames(numberFrames) {std::cout << "u" << m_numberFrames;};
   
   int getX() const { return m_x; }
   int getY() const { return m_y; }

@@ -13,7 +13,6 @@ class AnimatedGraphic : public SDLGameObject
   virtual void update();
   virtual void clean();
 private:
-  int m_numberFrames;
   int m_animSpeed;
 };
 #endif
