@@ -15,7 +15,7 @@
       <source file="../src/BaseCreator.h" lastModified="150c8524008">
          <include file="../src/GameObject.h"/>
       </source>
-      <source file="../src/Game.cpp" lastModified="150d2280ab8">
+      <source file="../src/Game.cpp" lastModified="150d25f1878">
          <include file="../src/Game.h"/>
          <include file="../src/Player.h"/>
          <include file="../src/Enemy.h"/>
@@ -23,6 +23,7 @@
          <include file="../src/PlayState.h"/>
          <include file="../src/MenuButton.h"/>
          <include file="../src/GameObjectFactory.h"/>
+         <include file="../src/AnimatedGraphic.h"/>
       </source>
       <source file="../src/InputHandler.h" lastModified="150c4d828c0">
          <include file="../src/Vector2D.h"/>
@@ -38,9 +39,10 @@
          <include file="../src/tinyxml.h"/>
          <sysinclude file="../../../../../../usr/include/ctype.h"/>
       </source>
-      <source file="../src/AnimatedGraphic.h" lastModified="150d1e5ae70">
+      <source file="../src/AnimatedGraphic.h" lastModified="150d2676190">
          <include file="../src/SDLGameObject.h"/>
          <include file="../src/LoaderParams.h"/>
+         <include file="../src/BaseCreator.h"/>
       </source>
       <source file="../src/PauseState.h" lastModified="150d230dc88">
          <include file="../src/GameState.h"/>
@@ -82,7 +84,7 @@
          <include file="../src/GameObject.h"/>
          <include file="../src/SDLGameObject.h"/>
       </source>
-      <source file="../src/AnimatedGraphic.cpp" lastModified="150d20a60f8">
+      <source file="../src/AnimatedGraphic.cpp" lastModified="150d25d0538">
          <include file="../src/AnimatedGraphic.h"/>
          <include file="../src/SDLGameObject.h"/>
       </source>
@@ -159,16 +161,6 @@
       </source>
       <source file="../src/GameState.h" lastModified="150d1d52028">
       </source>
-      <source file="../src/GameOverState.cpp" lastModified="150d1f65fe0">
-         <include file="../src/GameOverState.h"/>
-         <include file="../src/MenuButton.h"/>
-         <include file="../src/Game.h"/>
-         <include file="../src/TextureManager.h"/>
-         <include file="../src/LoaderParams.h"/>
-         <include file="../src/MainMenuState.h"/>
-         <include file="../src/PlayState.h"/>
-         <include file="../src/AnimatedGraphic.h"/>
-      </source>
       <source file="../src/Enemy.cpp" lastModified="150d20a8bf0">
          <include file="../src/Enemy.h"/>
       </source>
@@ -197,9 +189,10 @@
          <sysinclude file="../../../../../../usr/include/assert.h"/>
          <sysinclude file="../../../../../../usr/include/string.h"/>
       </source>
-      <source file="../src/GameOverState.h" lastModified="150c79febb0">
+      <source file="../src/GameOverState.h" lastModified="150d2669e40">
          <include file="../src/GameState.h"/>
          <include file="../src/GameObject.h"/>
+         <include file="../src/MenuState.h"/>
       </source>
       <source file="../src/Game.h" lastModified="150c407b960">
          <include file="../src/TextureManager.h"/>

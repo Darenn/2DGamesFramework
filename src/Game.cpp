@@ -5,6 +5,7 @@
 #include "PlayState.h"
 #include "MenuButton.h"
 #include "GameObjectFactory.h"
+#include "AnimatedGraphic.h"
 
 Game* Game::s_pInstance = 0;
 
@@ -56,6 +57,8 @@ bool Game::init(const char* title, int posx, int posy,
   m_gameObjects.push_back(new Enemy(new LoaderParams(250, 250, 128, 82, "animate")));
   m_gameObjects.push_back(new Enemy(new LoaderParams(100, 150, 128, 82, "animate")));*/
   TheInputHandler::Instance()->initialiseJoysticks();
+  TheGameObjectFactory::Instance()->registerType("AnimatedGraphic",
+						 new AnimatedGraphicCreator());
   TheGameObjectFactory::Instance()->registerType("Player", new
 						   PlayerCreator());
   TheGameObjectFactory::Instance()->registerType("Enemy", new
