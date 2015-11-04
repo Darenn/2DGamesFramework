@@ -42,20 +42,21 @@
          <include file="../src/SDLGameObject.h"/>
          <include file="../src/LoaderParams.h"/>
       </source>
-      <source file="../src/PauseState.h" lastModified="150c4d2ece8">
+      <source file="../src/PauseState.h" lastModified="150d230dc88">
          <include file="../src/GameState.h"/>
          <include file="../src/GameObject.h"/>
+         <include file="../src/MenuState.h"/>
       </source>
       <source file="../src/GameObjectFactory.cpp" lastModified="150d21c5e70">
          <include file="../src/BaseCreator.h"/>
          <include file="../src/GameObjectFactory.h"/>
          <include file="../src/MenuButton.h"/>
       </source>
-      <source file="../src/StateParser.h" lastModified="150d1f8b970">
-         <include file="../src/tinyxml.h"/>
-      </source>
       <source file="../src/tinystr.cpp" lastModified="12fef8a2210">
          <include file="../src/tinystr.h"/>
+      </source>
+      <source file="../src/StateParser.h" lastModified="150d1f8b970">
+         <include file="../src/tinyxml.h"/>
       </source>
       <source file="../src/LoaderParams.h" lastModified="150d1fd87e8">
       </source>
@@ -148,12 +149,13 @@
          <include file="../src/LoaderParams.h"/>
          <include file="../src/BaseCreator.h"/>
       </source>
-      <source file="../src/PauseState.cpp" lastModified="150d1e30aa8">
+      <source file="../src/PauseState.cpp" lastModified="150d233c6a0">
          <include file="../src/PauseState.h"/>
          <include file="../src/InputHandler.h"/>
          <include file="../src/Game.h"/>
          <include file="../src/MainMenuState.h"/>
          <include file="../src/MenuButton.h"/>
+         <include file="../src/StateParser.h"/>
       </source>
       <source file="../src/GameState.h" lastModified="150d1d52028">
       </source>
