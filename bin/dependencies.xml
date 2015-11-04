@@ -1,102 +1,199 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <dependencies>
    <includePath signature="">
-      <source file="../src/MenuState.cpp" lastModified="150c4dab900">
-         <include file="../src/MenuState.h"/>
-         <include file="../src/TextureManager.h"/>
-         <include file="../src/Game.h"/>
-         <include file="../src/MenuButton.h"/>
-         <include file="../src/PlayState.h"/>
-      </source>
-      <source file="../src/InputHandler.cpp" lastModified="150c4d74e00">
-         <include file="../src/InputHandler.h"/>
-         <include file="../src/Game.h"/>
-      </source>
-      <source file="../src/GameObject.cpp" lastModified="150b2e35b80">
-         <include file="../src/GameObject.h"/>
-      </source>
-      <source file="../src/MenuButton.h" lastModified="150c3f27410">
-         <include file="../src/LoaderParams.h"/>
-         <include file="../src/SDLGameObject.h"/>
-      </source>
-      <source file="../src/GameOverState.cpp" lastModified="150c83891d0">
-         <include file="../src/GameOverState.h"/>
-         <include file="../src/MenuButton.h"/>
-         <include file="../src/Game.h"/>
+      <source file="../src/GameObject.h" lastModified="150ce909fa0">
          <include file="../src/TextureManager.h"/>
          <include file="../src/LoaderParams.h"/>
-         <include file="../src/MenuState.h"/>
-         <include file="../src/PlayState.h"/>
-         <include file="../src/AnimatedGraphic.h"/>
-      </source>
-      <source file="../src/Vector2D.h" lastModified="150b3309508">
-      </source>
-      <source file="../src/SDLGameObject.h" lastModified="150c802b8a8">
-         <include file="../src/GameObject.h"/>
-         <include file="../src/LoaderParams.h"/>
-         <include file="../src/Game.h"/>
-         <include file="../src/Vector2D.h"/>
-      </source>
-      <source file="../src/TextureManager.h" lastModified="150bf344408">
          <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
-         <sysinclude file="../../../../../../usr/include/SDL2/SDL_image.h"/>
+      </source>
+      <source file="../src/tinyxmlerror.cpp" lastModified="12fef8a2210">
+         <include file="../src/tinyxml.h"/>
       </source>
       <source file="../src/TextureManager.cpp" lastModified="150bf32c538">
          <include file="../src/TextureManager.h"/>
       </source>
+      <source file="../src/BaseCreator.h" lastModified="150c8524008">
+         <include file="../src/GameObject.h"/>
+      </source>
+      <source file="../src/Game.cpp" lastModified="150d21d3d18">
+         <include file="../src/Game.h"/>
+         <include file="../src/Player.h"/>
+         <include file="../src/Enemy.h"/>
+         <include file="../src/MainMenuState.h"/>
+         <include file="../src/PlayState.h"/>
+         <include file="../src/MenuButton.h"/>
+         <include file="../src/GameObjectFactory.h"/>
+      </source>
       <source file="../src/InputHandler.h" lastModified="150c4d828c0">
          <include file="../src/Vector2D.h"/>
          <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
+      </source>
+      <source file="../src/SDLGameObject.h" lastModified="150d20772f8">
+         <include file="../src/GameObject.h"/>
+         <include file="../src/LoaderParams.h"/>
+         <include file="../src/Game.h"/>
+         <include file="../src/Vector2D.h"/>
+      </source>
+      <source file="../src/tinyxmlparser.cpp" lastModified="12fef8a29e0">
+         <include file="../src/tinyxml.h"/>
+         <sysinclude file="../../../../../../usr/include/ctype.h"/>
+      </source>
+      <source file="../src/AnimatedGraphic.h" lastModified="150d1e5ae70">
+         <include file="../src/SDLGameObject.h"/>
+         <include file="../src/LoaderParams.h"/>
+      </source>
+      <source file="../src/PauseState.h" lastModified="150c4d2ece8">
+         <include file="../src/GameState.h"/>
+         <include file="../src/GameObject.h"/>
+      </source>
+      <source file="../src/GameObjectFactory.cpp" lastModified="150d21c5e70">
+         <include file="../src/BaseCreator.h"/>
+         <include file="../src/GameObjectFactory.h"/>
+         <include file="../src/MenuButton.h"/>
+      </source>
+      <source file="../src/StateParser.h" lastModified="150d1f8b970">
+         <include file="../src/tinyxml.h"/>
+      </source>
+      <source file="../src/tinystr.cpp" lastModified="12fef8a2210">
+         <include file="../src/tinystr.h"/>
+      </source>
+      <source file="../src/LoaderParams.h" lastModified="150d1fd87e8">
+      </source>
+      <source file="../src/MainMenuState.h" lastModified="150cec71cd8">
+         <include file="../src/GameState.h"/>
+         <include file="../src/MenuState.h"/>
+         <include file="../src/GameObject.h"/>
+      </source>
+      <source file="../src/tinyxml.cpp" lastModified="12fef8a29e0">
+         <include file="../src/tinyxml.h"/>
+         <sysinclude file="../../../../../../usr/include/ctype.h"/>
+      </source>
+      <source file="../src/tinyxml.h" lastModified="150ceb25488">
+         <include file="../src/tinystr.h"/>
+         <sysinclude file="../../../../../../usr/include/ctype.h"/>
+         <sysinclude file="../../../../../../usr/include/stdio.h"/>
+         <sysinclude file="../../../../../../usr/include/stdlib.h"/>
+         <sysinclude file="../../../../../../usr/include/string.h"/>
+         <sysinclude file="../../../../../../usr/include/assert.h"/>
       </source>
       <source file="../src/PlayState.h" lastModified="150c80afdd8">
          <include file="../src/GameState.h"/>
          <include file="../src/GameObject.h"/>
          <include file="../src/SDLGameObject.h"/>
       </source>
-      <source file="../src/GameOverState.h" lastModified="150c79febb0">
-         <include file="../src/GameState.h"/>
-         <include file="../src/GameObject.h"/>
-      </source>
-      <source file="../src/Player.cpp" lastModified="150c7951258">
-         <include file="../src/Player.h"/>
-      </source>
-      <source file="../src/Player.h" lastModified="150b47e23a8">
+      <source file="../src/AnimatedGraphic.cpp" lastModified="150d20a60f8">
+         <include file="../src/AnimatedGraphic.h"/>
          <include file="../src/SDLGameObject.h"/>
-         <include file="../src/LoaderParams.h"/>
       </source>
-      <source file="../src/Enemy.h" lastModified="150c79489a0">
-         <include file="../src/SDLGameObject.h"/>
-         <include file="../src/LoaderParams.h"/>
-      </source>
-      <source file="../src/GameState.h" lastModified="150bf17f208">
-      </source>
-      <source file="../src/PauseState.h" lastModified="150c4d2ece8">
-         <include file="../src/GameState.h"/>
-         <include file="../src/GameObject.h"/>
-      </source>
-      <source file="../src/MenuButton.cpp" lastModified="150c4daf780">
-         <include file="../src/MenuButton.h"/>
-      </source>
-      <source file="../src/Game.cpp" lastModified="150c4ab7370">
+      <source file="../src/StateParser.cpp" lastModified="150d2163068">
+         <include file="../src/StateParser.h"/>
          <include file="../src/Game.h"/>
-         <include file="../src/Player.h"/>
-         <include file="../src/Enemy.h"/>
-         <include file="../src/MenuState.h"/>
-         <include file="../src/PlayState.h"/>
+         <include file="../src/TextureManager.h"/>
+         <include file="../src/GameObjectFactory.h"/>
+         <include file="../src/GameObject.h"/>
+         <include file="../src/LoaderParams.h"/>
+         <include file="../src/MainMenuState.h"/>
+      </source>
+      <source file="../src/GameStateMachine.cpp" lastModified="150c4bdcea8">
+         <include file="../src/GameStateMachine.h"/>
       </source>
       <source file="../src/GameStateMachine.h" lastModified="150c4be0170">
          <include file="../src/GameState.h"/>
+      </source>
+      <source file="../src/Vector2D.cpp" lastModified="150b559a310">
+         <include file="../src/Vector2D.h"/>
+      </source>
+      <source file="../src/PlayState.cpp" lastModified="150d1e43770">
+         <include file="../src/PlayState.h"/>
+         <include file="../src/Game.h"/>
+         <include file="../src/LoaderParams.h"/>
+         <include file="../src/Player.h"/>
+         <include file="../src/Enemy.h"/>
+         <include file="../src/TextureManager.h"/>
+         <include file="../src/PauseState.h"/>
+         <include file="../src/SDLGameObject.h"/>
+         <include file="../src/GameOverState.h"/>
+      </source>
+      <source file="../src/InputHandler.cpp" lastModified="150c4d74e00">
+         <include file="../src/InputHandler.h"/>
+         <include file="../src/Game.h"/>
+      </source>
+      <source file="../src/Vector2D.h" lastModified="150d211e6c0">
+      </source>
+      <source file="../src/TextureManager.h" lastModified="150bf344408">
+         <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
+         <sysinclude file="../../../../../../usr/include/SDL2/SDL_image.h"/>
+      </source>
+      <source file="../src/SDLGameObject.cpp" lastModified="150d20c4d28">
+         <include file="../src/SDLGameObject.h"/>
       </source>
       <source file="../src/main.cpp" lastModified="150c45f08f0">
          <include file="../src/Game.h"/>
          <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
       </source>
-      <source file="../src/GameState.cpp" lastModified="150bf2c4140">
+      <source file="../src/MainMenuState.cpp" lastModified="150d2131770">
+         <include file="../src/MainMenuState.h"/>
+         <include file="../src/TextureManager.h"/>
+         <include file="../src/Game.h"/>
+         <include file="../src/MenuButton.h"/>
+         <include file="../src/PlayState.h"/>
+         <include file="../src/StateParser.h"/>
       </source>
-      <source file="../src/SDLGameObject.cpp" lastModified="150c798b7f0">
+      <source file="../src/MenuButton.cpp" lastModified="150d1fb1eb8">
+         <include file="../src/MenuButton.h"/>
+      </source>
+      <source file="../src/Player.h" lastModified="150d1e6db38">
          <include file="../src/SDLGameObject.h"/>
+         <include file="../src/LoaderParams.h"/>
+         <include file="../src/BaseCreator.h"/>
       </source>
-      <source file="../src/MenuState.h" lastModified="150c80ed250">
+      <source file="../src/PauseState.cpp" lastModified="150d1e30aa8">
+         <include file="../src/PauseState.h"/>
+         <include file="../src/InputHandler.h"/>
+         <include file="../src/Game.h"/>
+         <include file="../src/MainMenuState.h"/>
+         <include file="../src/MenuButton.h"/>
+      </source>
+      <source file="../src/GameState.h" lastModified="150d1d52028">
+      </source>
+      <source file="../src/GameOverState.cpp" lastModified="150d1f65fe0">
+         <include file="../src/GameOverState.h"/>
+         <include file="../src/MenuButton.h"/>
+         <include file="../src/Game.h"/>
+         <include file="../src/TextureManager.h"/>
+         <include file="../src/LoaderParams.h"/>
+         <include file="../src/MainMenuState.h"/>
+         <include file="../src/PlayState.h"/>
+         <include file="../src/AnimatedGraphic.h"/>
+      </source>
+      <source file="../src/Enemy.cpp" lastModified="150d20a8bf0">
+         <include file="../src/Enemy.h"/>
+      </source>
+      <source file="../src/MenuButton.h" lastModified="150d1fc43b0">
+         <include file="../src/LoaderParams.h"/>
+         <include file="../src/SDLGameObject.h"/>
+         <include file="../src/BaseCreator.h"/>
+         <include file="../src/GameObject.h"/>
+      </source>
+      <source file="../src/MenuState.h" lastModified="150ced6a568">
+         <include file="../src/GameState.h"/>
+         <include file="../src/GameObject.h"/>
+      </source>
+      <source file="../src/GameObjectFactory.h" lastModified="150d2053c90">
+         <include file="../src/BaseCreator.h"/>
+      </source>
+      <source file="../src/Enemy.h" lastModified="150ce97b038">
+         <include file="../src/SDLGameObject.h"/>
+         <include file="../src/LoaderParams.h"/>
+      </source>
+      <source file="../src/GameObject.cpp" lastModified="150b2e35b80">
+         <include file="../src/GameObject.h"/>
+      </source>
+      <source file="../src/tinystr.h" lastModified="12fef8a2210">
+         <sysinclude file="../../../../../../usr/include/assert.h"/>
+         <sysinclude file="../../../../../../usr/include/string.h"/>
+      </source>
+      <source file="../src/GameOverState.h" lastModified="150c79febb0">
          <include file="../src/GameState.h"/>
          <include file="../src/GameObject.h"/>
       </source>
@@ -108,46 +205,8 @@
          <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
          <sysinclude file="../../../../../../usr/include/SDL2/SDL_image.h"/>
       </source>
-      <source file="../src/Vector2D.cpp" lastModified="150b559a310">
-         <include file="../src/Vector2D.h"/>
-      </source>
-      <source file="../src/Enemy.cpp" lastModified="150c794fae8">
-         <include file="../src/Enemy.h"/>
-      </source>
-      <source file="../src/AnimatedGraphic.h" lastModified="150c83e6218">
-         <include file="../src/SDLGameObject.h"/>
-         <include file="../src/LoaderParams.h"/>
-      </source>
-      <source file="../src/PauseState.cpp" lastModified="150c7984e78">
-         <include file="../src/PauseState.h"/>
-         <include file="../src/InputHandler.h"/>
-         <include file="../src/Game.h"/>
-         <include file="../src/MenuState.h"/>
-         <include file="../src/MenuButton.h"/>
-      </source>
-      <source file="../src/LoaderParams.h" lastModified="150c83bc238">
-      </source>
-      <source file="../src/PlayState.cpp" lastModified="150c8117230">
-         <include file="../src/PlayState.h"/>
-         <include file="../src/Game.h"/>
-         <include file="../src/LoaderParams.h"/>
+      <source file="../src/Player.cpp" lastModified="150d20ac2a0">
          <include file="../src/Player.h"/>
-         <include file="../src/Enemy.h"/>
-         <include file="../src/TextureManager.h"/>
-         <include file="../src/PauseState.h"/>
-         <include file="../src/SDLGameObject.h"/>
-         <include file="../src/GameOverState.h"/>
-      </source>
-      <source file="../src/GameObject.h" lastModified="150b2e4ce98">
-         <include file="../src/TextureManager.h"/>
-         <include file="../src/LoaderParams.h"/>
-         <sysinclude file="../../../../../../usr/local/include/SDL2/SDL.h"/>
-      </source>
-      <source file="../src/GameStateMachine.cpp" lastModified="150c4bdcea8">
-         <include file="../src/GameStateMachine.h"/>
-      </source>
-      <source file="../src/AnimatedGraphic.cpp" lastModified="150c8347320">
-         <include file="../src/AnimatedGraphic.h"/>
       </source>
    </includePath>
 </dependencies>

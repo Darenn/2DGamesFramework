@@ -15,7 +15,7 @@
 
   <target name = "compile" depends = "setup">
     <cc outtype="executable" outfile="./bin/main" name = "g++">
-      <compilerarg value ="-Wall" />
+      <!--<compilerarg value ="-Wall" />-->
       <compilerarg value = "-std=c++11"/>
       <libset libs="SDL2"/>
       <libset libs="SDL2_image"/>

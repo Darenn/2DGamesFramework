@@ -1,82 +1,110 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <history>
-   <processor signature="g++ noversion nomachine -Wall -std=c++11 -c">
-      <target file="GameStateMachine.o" lastModified="150c4be20b0">
+   <processor signature="g++ noversion nomachine -std=c++11 -c">
+      <target file="GameStateMachine.o" lastModified="150d1dce858">
          <source file="../src/GameStateMachine.cpp" lastModified="150c4bdcac0"/>
       </target>
-      <target file="PlayState.o" lastModified="150c83bdd90">
-         <source file="../src/PlayState.cpp" lastModified="150c8116e48"/>
+      <target file="PlayState.o" lastModified="150d2121988">
+         <source file="../src/PlayState.cpp" lastModified="150d1e43388"/>
       </target>
-      <target file="TextureManager.o" lastModified="150bf34ad80">
+      <target file="MainMenuState.o" lastModified="150d2132af8">
+         <source file="../src/MainMenuState.cpp" lastModified="150d2131388"/>
+      </target>
+      <target file="GameObjectFactory.o" lastModified="150d21c6a28">
+         <source file="../src/GameObjectFactory.cpp" lastModified="150d21c56a0"/>
+      </target>
+      <target file="TextureManager.o" lastModified="150d1dce088">
          <source file="../src/TextureManager.cpp" lastModified="150bf32c538"/>
       </target>
+      <target file="tinyxmlparser.o" lastModified="150d1dcd0e8">
+         <source file="../src/tinyxmlparser.cpp" lastModified="12fef8a2210"/>
+      </target>
+      <target file="Enemy.o" lastModified="150d21215a0">
+         <source file="../src/Enemy.cpp" lastModified="150d20a8bf0"/>
+      </target>
+      <target file="Game.o" lastModified="150d21d50a0">
+         <source file="../src/Game.cpp" lastModified="150d21d3d18"/>
+      </target>
+      <target file="tinyxml.o" lastModified="150d1dcd8b8">
+         <source file="../src/tinyxml.cpp" lastModified="12fef8a2210"/>
+      </target>
+      <target file="SDLGameObject.o" lastModified="150d21215a0">
+         <source file="../src/SDLGameObject.cpp" lastModified="150d20c4940"/>
+      </target>
+      <target file="GameObject.o" lastModified="150d1fd9b70">
+         <source file="../src/GameObject.cpp" lastModified="150b2e35b80"/>
+      </target>
+      <target file="Player.o" lastModified="150d21215a0">
+         <source file="../src/Player.cpp" lastModified="150d20ac2a0"/>
+      </target>
+      <target file="GameOverState.o" lastModified="150d2121988">
+         <source file="../src/GameOverState.cpp" lastModified="150d1f65810"/>
+      </target>
+      <target file="InputHandler.o" lastModified="150d2121d70">
+         <source file="../src/InputHandler.cpp" lastModified="150c4d74e00"/>
+      </target>
+      <target file="MenuButton.o" lastModified="150d2122158">
+         <source file="../src/MenuButton.cpp" lastModified="150d1fb1eb8"/>
+      </target>
+      <target file="tinyxmlerror.o" lastModified="150d1dce088">
+         <source file="../src/tinyxmlerror.cpp" lastModified="12fef8a2210"/>
+      </target>
+      <target file="Vector2D.o" lastModified="150d2122158">
+         <source file="../src/Vector2D.cpp" lastModified="150b559a310"/>
+      </target>
+      <target file="AnimatedGraphic.o" lastModified="150d21211b8">
+         <source file="../src/AnimatedGraphic.cpp" lastModified="150d20a60f8"/>
+      </target>
+      <target file="tinystr.o" lastModified="150d1dce088">
+         <source file="../src/tinystr.cpp" lastModified="12fef8a2210"/>
+      </target>
+      <target file="PauseState.o" lastModified="150d21211b8">
+         <source file="../src/PauseState.cpp" lastModified="150d1e30aa8"/>
+      </target>
+      <target file="StateParser.o" lastModified="150d2178440">
+         <source file="../src/StateParser.cpp" lastModified="150d2162898"/>
+      </target>
+      <target file="main.o" lastModified="150d2121988">
+         <source file="../src/main.cpp" lastModified="150c45f0508"/>
+      </target>
+   </processor>
+   <processor signature="g++ noversion nomachine -Wall -std=c++11 -c">
       <target file="GameState.o" lastModified="150bf334238">
          <source file="../src/GameState.cpp" lastModified="150bf2c3d58"/>
       </target>
-      <target file="Enemy.o" lastModified="150c83bd9a8">
-         <source file="../src/Enemy.cpp" lastModified="150c794fae8"/>
-      </target>
-      <target file="Game.o" lastModified="150c83be560">
-         <source file="../src/Game.cpp" lastModified="150c4ab7370"/>
-      </target>
-      <target file="SDLGameObject.o" lastModified="150c83bd9a8">
-         <source file="../src/SDLGameObject.cpp" lastModified="150c798b408"/>
-      </target>
-      <target file="GameObject.o" lastModified="150c83be178">
-         <source file="../src/GameObject.cpp" lastModified="150b2e35b80"/>
-      </target>
-      <target file="Player.o" lastModified="150c83bd9a8">
-         <source file="../src/Player.cpp" lastModified="150c7951258"/>
-      </target>
-      <target file="MenuState.o" lastModified="150c83bd5c0">
-         <source file="../src/MenuState.cpp" lastModified="150c4dab518"/>
-      </target>
-      <target file="GameOverState.o" lastModified="150c83e71b8">
-         <source file="../src/GameOverState.cpp" lastModified="150c8388a00"/>
-      </target>
-      <target file="InputHandler.o" lastModified="150c83be178">
-         <source file="../src/InputHandler.cpp" lastModified="150c4d74e00"/>
-      </target>
-      <target file="MenuButton.o" lastModified="150c83be560">
-         <source file="../src/MenuButton.cpp" lastModified="150c4daf780"/>
-      </target>
-      <target file="Vector2D.o" lastModified="150bf0cf1a0">
-         <source file="../src/Vector2D.cpp" lastModified="150b559a310"/>
-      </target>
-      <target file="AnimatedGraphic.o" lastModified="150c83e71b8">
-         <source file="../src/AnimatedGraphic.cpp" lastModified="150c8347320"/>
-      </target>
-      <target file="PauseState.o" lastModified="150c83bd5c0">
-         <source file="../src/PauseState.cpp" lastModified="150c7984e78"/>
+      <target file="MenuState.o" lastModified="150c9a5d1b8">
+         <source file="../src/MenuState.cpp" lastModified="150c85d1960"/>
       </target>
       <target file="Menu.o" lastModified="150bf397810">
          <source file="../src/Menu.cpp" lastModified="150befafbf8"/>
       </target>
-      <target file="main.o" lastModified="150c83bdd90">
-         <source file="../src/main.cpp" lastModified="150c45f0508"/>
-      </target>
    </processor>
    <processor signature="gcc -lSDL2 -lSDL2_image -lstdc++ -lm">
-      <target file="main" lastModified="150c83e71b8">
+      <target file="main" lastModified="150d21d50a0">
          <source file="../../../../../../usr/local/lib/libSDL2.a" lastModified="150adf4c0f0"/>
          <source file="../../../../../../usr/local/lib/libSDL2-2.0.so.0.4.0" lastModified="150adf4c0f0"/>
-         <source file="PauseState.o" lastModified="150c83bd5c0"/>
-         <source file="MenuState.o" lastModified="150c83bd5c0"/>
-         <source file="AnimatedGraphic.o" lastModified="150c83e71b8"/>
-         <source file="Enemy.o" lastModified="150c83bd9a8"/>
-         <source file="Player.o" lastModified="150c83bd9a8"/>
-         <source file="SDLGameObject.o" lastModified="150c83bd9a8"/>
-         <source file="GameState.o" lastModified="150bf334238"/>
-         <source file="main.o" lastModified="150c83bdd90"/>
-         <source file="PlayState.o" lastModified="150c83bdd90"/>
-         <source file="GameOverState.o" lastModified="150c83e71b8"/>
-         <source file="TextureManager.o" lastModified="150bf34ad80"/>
-         <source file="GameObject.o" lastModified="150c83be178"/>
-         <source file="InputHandler.o" lastModified="150c83be178"/>
-         <source file="MenuButton.o" lastModified="150c83be560"/>
-         <source file="Vector2D.o" lastModified="150bf0cf1a0"/>
-         <source file="GameStateMachine.o" lastModified="150c4be20b0"/>
-         <source file="Game.o" lastModified="150c83be560"/>
+         <source file="tinyxmlparser.o" lastModified="150d1dcd0e8"/>
+         <source file="PauseState.o" lastModified="150d21211b8"/>
+         <source file="AnimatedGraphic.o" lastModified="150d21211b8"/>
+         <source file="Enemy.o" lastModified="150d21215a0"/>
+         <source file="Player.o" lastModified="150d21215a0"/>
+         <source file="SDLGameObject.o" lastModified="150d21215a0"/>
+         <source file="tinyxml.o" lastModified="150d1dcd8b8"/>
+         <source file="main.o" lastModified="150d2121988"/>
+         <source file="GameObjectFactory.o" lastModified="150d21c6a28"/>
+         <source file="PlayState.o" lastModified="150d2121988"/>
+         <source file="GameOverState.o" lastModified="150d2121988"/>
+         <source file="tinyxmlerror.o" lastModified="150d1dce088"/>
+         <source file="tinystr.o" lastModified="150d1dce088"/>
+         <source file="TextureManager.o" lastModified="150d1dce088"/>
+         <source file="MainMenuState.o" lastModified="150d2132af8"/>
+         <source file="GameObject.o" lastModified="150d1fd9b70"/>
+         <source file="InputHandler.o" lastModified="150d2121d70"/>
+         <source file="MenuButton.o" lastModified="150d2122158"/>
+         <source file="Vector2D.o" lastModified="150d2122158"/>
+         <source file="StateParser.o" lastModified="150d2178440"/>
+         <source file="GameStateMachine.o" lastModified="150d1dce858"/>
+         <source file="Game.o" lastModified="150d21d50a0"/>
       </target>
    </processor>
 </history>

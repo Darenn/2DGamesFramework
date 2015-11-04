@@ -1,7 +1,6 @@
 #include "Player.h"
 
-Player::Player(const LoaderParams* pParams) :
-  SDLGameObject(pParams)
+Player::Player()
 {
 }
 void Player::draw()
@@ -11,7 +10,7 @@ void Player::draw()
 void Player::update()
 {
   // to modify because 5 is the number of pictures
-  m_currentFrame = int(((SDL_GetTicks() / 100) % m_numberFrames));
+  m_currentFrame = int(((SDL_GetTicks() / 100) % m_numFrames));
   handleInput(); // add our function
   SDLGameObject::update();
 }

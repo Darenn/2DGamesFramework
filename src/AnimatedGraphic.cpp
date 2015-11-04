@@ -1,8 +1,9 @@
 #include "AnimatedGraphic.h"
+#include "SDLGameObject.h"
 
 
-AnimatedGraphic::AnimatedGraphic(const LoaderParams* pParams, int animSpeed) :
-  SDLGameObject(pParams), m_animSpeed(animSpeed)
+AnimatedGraphic::AnimatedGraphic(int animSpeed) :
+  m_animSpeed(animSpeed)
 {
 }
 
@@ -14,7 +15,7 @@ void AnimatedGraphic::update()
 {
   //  std::cout << "speed" << m_animSpeed << " numberFrames" << m_numberFrames << std::endl;
   m_currentFrame = int(((SDL_GetTicks() / (1000 / m_animSpeed)) %
-			m_numberFrames));
+			m_numFrames));
   SDLGameObject::update();
 }
 void AnimatedGraphic::clean()
