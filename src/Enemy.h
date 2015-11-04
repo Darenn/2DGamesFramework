@@ -4,6 +4,7 @@
 #include "SDLGameObject.h"
 #include "LoaderParams.h"
 #include <string>
+#include "BaseCreator.h"
 
 class Enemy : public SDLGameObject
 {
@@ -12,6 +13,14 @@ class Enemy : public SDLGameObject
   virtual void draw();
   virtual void update();
   virtual void clean();  
+};
+
+class EnemyCreator : public BaseCreator
+{
+  GameObject* createGameObject() const
+  {
+    return new Enemy();
+  }
 };
 
 #endif

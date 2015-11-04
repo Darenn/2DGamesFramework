@@ -56,6 +56,10 @@ bool Game::init(const char* title, int posx, int posy,
   m_gameObjects.push_back(new Enemy(new LoaderParams(250, 250, 128, 82, "animate")));
   m_gameObjects.push_back(new Enemy(new LoaderParams(100, 150, 128, 82, "animate")));*/
   TheInputHandler::Instance()->initialiseJoysticks();
+  TheGameObjectFactory::Instance()->registerType("Player", new
+						   PlayerCreator());
+  TheGameObjectFactory::Instance()->registerType("Enemy", new
+						   EnemyCreator());
   TheGameObjectFactory::Instance()->registerType("MenuButton", new
 						   MenuButtonCreator());
   m_pGameStateMachine = new GameStateMachine();
