@@ -10,8 +10,7 @@ int main(int argc, char* args[])
   Uint32 frameStart, frameTime;
   TheGame::Instance()->init("Chapter 1 : setting up SDL",
 	       SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-	       640, 480,
-	       false);
+	       640, 480, false);
   while (TheGame::Instance()->running())
     { 
       frameStart = SDL_GetTicks();
@@ -20,12 +19,8 @@ int main(int argc, char* args[])
       TheGame::Instance()->render();
       frameTime = SDL_GetTicks() - frameStart;
       if(frameTime < DELAY_TIME)
-	{
-	  SDL_Delay((int)(DELAY_TIME - frameTime));
-	}
+		  SDL_Delay((int)(DELAY_TIME - frameTime));
     }
-
   TheGame::Instance()->clean();
-
   return 0;
 }
