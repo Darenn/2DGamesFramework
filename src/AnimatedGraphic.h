@@ -2,28 +2,29 @@
 #define __ANIMATEDGRAPHIC__
 
 #include "SDLGameObject.h"
-#include "LoaderParams.h"
-#include <string>
 #include "BaseCreator.h"
 
+class LoaderParams;
+
+/**
+   Represent an animated graphic with a speed.
+*/
 class AnimatedGraphic : public SDLGameObject
 {
- public:
-  AnimatedGraphic();
-  virtual void draw();
-  virtual void update();
-  virtual void clean();
-  void load(const LoaderParams *pParams);
+public:
+	void update();
+	void load(const LoaderParams *pParams);
+	
 private:
-  int m_animSpeed;
+	int m_animSpeed;
 };
 
 class AnimatedGraphicCreator : public BaseCreator
 {
-  GameObject* createGameObject() const
-  {
-    return new AnimatedGraphic();
-  }
+	GameObject* createGameObject() const
+		{
+			return new AnimatedGraphic();
+		}
 };
 
 #endif

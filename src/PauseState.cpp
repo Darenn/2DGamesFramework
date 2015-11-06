@@ -5,6 +5,7 @@
 #include "MenuButton.h"
 #include "StateParser.h"
 
+#include<iostream>
 #include "GameStateMachine.h"
 #include "TextureManager.h"
 
@@ -43,7 +44,7 @@ bool PauseState::onEnter()
   m_callbacks.push_back(s_pauseToMain);
   m_callbacks.push_back(s_resumePlay);
   setCallbacks(m_callbacks);
-  std::cout << "entering PauseState\n";
+  std::cerr << "entering PauseState\n";
   return true;
 }
 
@@ -80,6 +81,6 @@ bool PauseState::onExit()
     }
   // reset the mouse button states to false
   TheInputHandler::Instance()->reset();
-  std::cout << "exiting PauseState\n";
+  std::cerr << "exiting PauseState\n";
   return true;
 }
