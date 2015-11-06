@@ -7,6 +7,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "GameStateMachine.h"
+#include "TextureManager.h"
 
 
 //Game* Game::s_pInstance = 0;

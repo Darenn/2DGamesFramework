@@ -6,6 +6,7 @@
 #include "StateParser.h"
 
 #include "GameStateMachine.h"
+#include "TextureManager.h"
 
 const std::string PauseState::s_pauseID = "PAUSE";
 

@@ -1,5 +1,5 @@
 #include "Enemy.h"
-
+#include "SDL2/SDL.h"
 
 Enemy::Enemy()
 {

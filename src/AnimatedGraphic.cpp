@@ -1,6 +1,6 @@
 #include "AnimatedGraphic.h"
 #include "SDLGameObject.h"
-
+#include "SDL2/SDL.h"
 
 AnimatedGraphic::AnimatedGraphic()
 {
