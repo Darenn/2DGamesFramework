@@ -6,6 +6,8 @@
 #include <iostream>
 #include "StateParser.h"
 
+#include "GameStateMachine.h"
+
 const std::string MainMenuState::s_menuID = "MENU";
 
 void MainMenuState::update()

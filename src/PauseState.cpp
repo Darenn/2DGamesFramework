@@ -5,6 +5,8 @@
 #include "MenuButton.h"
 #include "StateParser.h"
 
+#include "GameStateMachine.h"
+
 const std::string PauseState::s_pauseID = "PAUSE";
 
 void PauseState::s_pauseToMain()

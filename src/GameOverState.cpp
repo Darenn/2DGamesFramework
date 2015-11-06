@@ -10,6 +10,8 @@
 #include "AnimatedGraphic.h"
 #include "StateParser.h"
 
+#include "GameStateMachine.h"
+
 const std::string GameOverState::s_gameOverID = "GAMEOVER";
 
 void GameOverState::setCallbacks(const std::vector<Callback>&

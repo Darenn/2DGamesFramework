@@ -6,6 +6,7 @@
 #include <iostream>
 #include "Vector2D.h"
 #include <utility>
+#include "Singleton.h"
 
 enum mouse_buttons
   {
@@ -15,18 +16,19 @@ enum mouse_buttons
   };
 
 
-class InputHandler
+class InputHandler : public Singleton<InputHandler>
 {
+	friend class Singleton; // to access private constructor
 public:
   const int m_joystickDeadZone = 10000;
-  static InputHandler* Instance()
+	/*static InputHandler* Instance()
   {
     if(s_pInstance == 0)
       {
 	s_pInstance = new InputHandler();
       }
     return s_pInstance;
-  };
+	};*/
   void update();
   void clean();
   void initialiseJoysticks();
@@ -53,7 +55,7 @@ private:
   Vector2D m_mousePosition;
   InputHandler();
   ~InputHandler() {};
-  static InputHandler* s_pInstance;
+	//static InputHandler* s_pInstance;
   std::vector<SDL_Joystick*> m_joysticks;
   bool m_bJoysticksInitialised;
 
