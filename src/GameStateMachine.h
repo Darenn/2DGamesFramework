@@ -1,11 +1,17 @@
 #ifndef __GAMESTATEMACHINE__
 #define __GAMESTATEMACHINE__
 
-#include "GameState.h"
 #include <vector>
+#include "Singleton.h"
 
-class GameStateMachine
+class GameState;
+/**
+ * Handle all states of the game
+ */
+class GameStateMachine : public Singleton<GameStateMachine>
 {
+	friend Singleton;
+	
 public:
 // add state without removing the previous state
 void pushState(GameState* pState);
