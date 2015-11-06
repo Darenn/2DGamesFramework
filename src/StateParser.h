@@ -1,12 +1,12 @@
 #ifndef __STATEPARSER__
 #define __STATEPARSER__
 
-#include <iostream>
 #include <vector>
 #include <string>
-#include "tinyxml.h"
 
+class TiXmlElement;
 class GameObject;
+
 class StateParser
 {
 public:
