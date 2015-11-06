@@ -1,30 +1,12 @@
 #include "MainMenuState.h"
-#include "TextureManager.h"
 #include "Game.h"
 #include "MenuButton.h"
 #include "PlayState.h"
 #include <iostream>
 #include "StateParser.h"
-
 #include "GameStateMachine.h"
 
 const std::string MainMenuState::s_menuID = "MENU";
-
-void MainMenuState::update()
-{
-  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
-    {       
-      m_gameObjects[i]->update();     
-    }
-}
-
-void MainMenuState::render()
-{
-  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
-    {
-      m_gameObjects[i]->draw();
-    }
-}
 
 bool MainMenuState::onEnter()
 {
@@ -58,22 +40,6 @@ void MainMenuState::setCallbacks(const std::vector<Callback>&
     }
 }
 
-bool MainMenuState::onExit()
-{
-  // clear the texture manager
-  for(int i = 0; i < m_textureIDList.size(); i++)
-    {
-      TheTextureManager::Instance()->
-	clearFromTextureMap(m_textureIDList[i]);
-    }
-  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
-    {
-      m_gameObjects[i]->clean();
-    }
-  m_gameObjects.clear();
-  std::cout << "exiting MainMenuState\n";
-  return true;
-}
 
 void MainMenuState::s_menuToPlay()
 {

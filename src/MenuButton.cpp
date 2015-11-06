@@ -15,12 +15,6 @@ void MenuButton::load(const LoaderParams *pParams)
   m_currentFrame = MOUSE_OUT;
 }
 
-
-void MenuButton::draw()
-{
-  SDLGameObject::draw(); // use the base class drawing
-}
-
 void MenuButton::update()
 {
   Vector2D* pMousePos = TheInputHandler::Instance()->getMousePosition();
@@ -47,9 +41,4 @@ void MenuButton::update()
     {
       m_currentFrame = MOUSE_OUT;
     }
-}
-
-void MenuButton::clean()
-{
-  SDLGameObject::clean();
 }

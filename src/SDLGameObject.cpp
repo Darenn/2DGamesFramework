@@ -17,7 +17,7 @@ void SDLGameObject::load(const LoaderParams *pParams)
   m_numFrames = pParams->getNumFrames();
 }
 
-void SDLGameObject::draw()
+void SDLGameObject::render()
 {
   if(m_velocity.getX() > 0)
       TextureManager::Instance()->drawFrame(m_textureID,

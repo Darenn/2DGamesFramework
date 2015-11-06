@@ -3,13 +3,9 @@
 #include <iostream>
 #include "MenuButton.h"
 #include "Game.h"
-#include "TextureManager.h"
-#include "LoaderParams.h"
 #include "MainMenuState.h"
 #include "PlayState.h"
-#include "AnimatedGraphic.h"
 #include "StateParser.h"
-
 #include "GameStateMachine.h"
 
 const std::string GameOverState::s_gameOverID = "GAMEOVER";
@@ -56,38 +52,4 @@ bool GameOverState::onEnter()
   setCallbacks(m_callbacks);
   std::cout << "entering PauseState\n";
   return true;
-}
-
-void GameOverState::update()
-{
-  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
-    {       
-      m_gameObjects[i]->update();     
-    }
-}
-
-// see to optimize on exit (repetitive)
-bool GameOverState::onExit()
-{
-  //clear the texture manager
-  for(int i = 0; i < m_textureIDList.size(); i++)
-    {
-      TheTextureManager::Instance()->
-  	clearFromTextureMap(m_textureIDList[i]);
-    }
-  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
-    {
-      m_gameObjects[i]->clean();
-    }
-  m_gameObjects.clear();
-    std::cout << "exiting GameOverState\n";
-  return true;
-}
-
-void GameOverState::render()
-{
-  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
-    {
-      m_gameObjects[i]->draw();
-    }
 }

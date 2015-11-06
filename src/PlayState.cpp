@@ -1,30 +1,22 @@
 #include "PlayState.h"
 #include "Game.h"
-#include "LoaderParams.h"
-#include "Player.h"
-#include "Enemy.h"
 #include <iostream>
-#include "TextureManager.h"
 #include "PauseState.h"
 #include "SDLGameObject.h"
 #include "GameOverState.h"
 #include "StateParser.h"
-
-
 #include "InputHandler.h"
 #include "GameStateMachine.h"
+
 const std::string PlayState::s_playID = "PLAY";
 
 void PlayState::update()
-{ 
+{
+	GameState::update();
   if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_ESCAPE))
     {
 		TheGame::Instance()->getStateMachine()
 	->pushState(new PauseState());
-    }
-  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
-    {
-      m_gameObjects[i]->update();
     }
   if(checkCollision(dynamic_cast<SDLGameObject*>
 		    (m_gameObjects[0]), dynamic_cast<SDLGameObject*>
@@ -35,38 +27,12 @@ void PlayState::update()
     }
 }
 
-void PlayState::render()
-{
-  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
-    {
-      m_gameObjects[i]->draw();
-      }
-}
-
 bool PlayState::onEnter()
 {
-  // parse the state
   StateParser stateParser;
   stateParser.parseState("xml/test.xml", s_playID, &m_gameObjects,
 			 &m_textureIDList);
   std::cout << "entering PlayState\n";
-  return true;
-}
-
-bool PlayState::onExit()
-{
-  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
-    {
-      m_gameObjects[i]->clean();
-    }
-  m_gameObjects.clear();
-  // clear the texture manager
-  for(int i = 0; i < m_textureIDList.size(); i++)
-    {
-      TheTextureManager::Instance()->
-  	clearFromTextureMap(m_textureIDList[i]);
-    }
-  std::cout << "exiting PlayState\n";
   return true;
 }
 

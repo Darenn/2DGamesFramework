@@ -1,10 +1,8 @@
 #include "PauseState.h"
-#include "InputHandler.h"
 #include "Game.h"
 #include "MainMenuState.h"
 #include "MenuButton.h"
 #include "StateParser.h"
-
 #include<iostream>
 #include "GameStateMachine.h"
 #include "TextureManager.h"
@@ -19,20 +17,6 @@ void PauseState::s_pauseToMain()
 void PauseState::s_resumePlay()
 {
   TheGame::Instance()->getStateMachine()->popState();
-}
-void PauseState::update()
-{
-  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
-    {
-      m_gameObjects[i]->update();
-    }
-}
-void PauseState::render()
-{
-  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
-    {
-      m_gameObjects[i]->draw();
-    }
 }
 
 bool PauseState::onEnter()
@@ -64,23 +48,4 @@ void PauseState::setCallbacks(const std::vector<Callback>&
 	    pButton->setCallback(callbacks[pButton->getCallbackID()]);
 	  }
     }
-}
-
-bool PauseState::onExit()
-{
-  for(unsigned int i = 0; i < m_gameObjects.size(); i++)
-    {
-      m_gameObjects[i]->clean();
-    }
-  m_gameObjects.clear();
-  // clear the texture manager
-  for(int i = 0; i < m_textureIDList.size(); i++)
-    {
-      TheTextureManager::Instance()->
-  	clearFromTextureMap(m_textureIDList[i]);
-    }
-  // reset the mouse button states to false
-  TheInputHandler::Instance()->reset();
-  std::cerr << "exiting PauseState\n";
-  return true;
 }

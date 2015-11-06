@@ -1,26 +1,23 @@
 #ifndef __GAMEOVERSTATE__
 #define __GAMEOVERSTATE__
 
-#include "GameState.h"
 #include <vector>
 #include <string>
-#include "GameObject.h"
 #include "MenuState.h"
 
 class GameOverState : public MenuState
 {
 public:
-  virtual void update();
-  virtual void render();
-  virtual bool onEnter();
-  virtual bool onExit();
-  virtual std::string getStateID() const {return s_gameOverID;}
-  virtual void setCallbacks(const std::vector<Callback>& callbacks);
+	void update() { MenuState::update(); }
+	void render() { MenuState::render(); }	
+	bool onEnter();
+	bool onExit() { MenuState::onExit(); }
+	std::string getStateID() const {return s_gameOverID;}
+	void setCallbacks(const std::vector<Callback>& callbacks);
 private:
-  static void s_gameOverToMain();
-  static void s_restartPlay();
-  static const std::string s_gameOverID;
-  std::vector<GameObject*> m_gameObjects;
+	static void s_gameOverToMain();
+	static void s_restartPlay();
+	static const std::string s_gameOverID;
 };
 
 #endif
