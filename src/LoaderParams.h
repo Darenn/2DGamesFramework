@@ -2,13 +2,24 @@
 #define __LOADERPARAMS__
 
 #include <string>
-#include <iostream>
 
+/**
+ * Permit to load params for textures.
+ */
 class LoaderParams
 {
 
 public:
 
+	/**
+	 * "x" : the x position of the texture ont the frame
+	 * "y" : the y position of the texture ont the frame
+	 * "width" : width of on bloc of the sprite (texture)
+	 * "heigth" : heigth of on bloc of the sprite (texture)
+	 * "numFrames" : number of blocs of the sprite
+	 * "callbackID" : the id of a function to execute
+	 * "animSpeed" : speed of the animation (in ms)
+	 */
   LoaderParams(int x, int y, int width, int height, std::string
 	       textureID, int numFrames, int callbackID = 0, int animSpeed = 0) :
     m_x(x),
@@ -19,8 +30,7 @@ public:
     m_numFrames(numFrames),
     m_callbackID(callbackID),
     m_animSpeed(animSpeed)
-  {
-  }
+  {}
   
   int getX() const { return m_x; }
   int getY() const { return m_y; }
@@ -30,6 +40,7 @@ public:
   std::string getTextureID() const { return m_textureID; }
   int getCallbackID() const { return m_callbackID; }
   int getAnimSpeed() const { return m_animSpeed; }
+
 private:
   int m_x;
   int m_y;

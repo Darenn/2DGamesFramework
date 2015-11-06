@@ -7,6 +7,9 @@
 #include <SDL2/SDL_image.h>
 #include "Singleton.h"
 
+/**
+ * Handle all textures of the game and draw them.
+ */
 class TextureManager  : public Singleton<TextureManager>
 {
 	friend Singleton;

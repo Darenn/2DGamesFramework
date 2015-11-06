@@ -1,3 +1,4 @@
+#include <iostream>
 #include <map>
 #include <string>
 #include "BaseCreator.h"
@@ -13,11 +14,11 @@ bool GameObjectFactory::registerType(std::string typeID, BaseCreator* pCreator)
   if(it != m_creators.end())
     {
       delete pCreator;
-      std::cout << "don't register the type " << typeID;
+      std::cerr << "don't register the type " << typeID;
       return false;
     }
   m_creators[typeID] = pCreator;
-  std::cout << "register the type " << typeID;
+  std::cerr << "register the type " << typeID;
   return true;
 }
 GameObject* GameObjectFactory::create(std::string typeID)
@@ -26,7 +27,7 @@ GameObject* GameObjectFactory::create(std::string typeID)
     m_creators.find(typeID);
   if(it == m_creators.end())
     {
-      std::cout << "could not find type: " << typeID << "\n";
+      std::cerr << "could not find type: " << typeID << "\n";
       return NULL;
     }
   BaseCreator* pCreator = (*it).second;
