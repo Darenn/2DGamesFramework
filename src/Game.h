@@ -17,6 +17,7 @@ class GameStateMachine;
 class Game : public Singleton<Game>
 {
 	friend class Singleton;
+	
 public:
 	
 	/**
@@ -63,6 +64,14 @@ public:
 
 	SDL_Renderer* getRenderer() const { return m_pRenderer; }
 	GameStateMachine* getStateMachine(){ return m_pGameStateMachine; }
+	int getGameWidth() const
+		{
+			return m_gameWidth;
+		}
+	int getGameHeight() const
+		{
+			return m_gameHeight;
+		}
   
 private:
 
@@ -71,6 +80,8 @@ private:
 	SDL_Window* m_pWindow; // windows of the game
 	SDL_Renderer* m_pRenderer; // renderer of the frame
 	GameStateMachine* m_pGameStateMachine; // the gameStateMachine of the game
+	int m_gameWidth;
+	int m_gameHeight;
 
 protected:
 	

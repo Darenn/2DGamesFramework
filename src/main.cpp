@@ -10,7 +10,7 @@ int main(int argc, char* args[])
   Uint32 frameStart, frameTime;
   TheGame::Instance()->init("Chapter 1 : setting up SDL",
 	       SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED,
-	       640, 480, false);
+							640, 480, false);
   while (TheGame::Instance()->running())
     { 
       frameStart = SDL_GetTicks();

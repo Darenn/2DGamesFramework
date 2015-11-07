@@ -7,33 +7,46 @@
 #include "StateParser.h"
 #include "InputHandler.h"
 #include "GameStateMachine.h"
+#include "Level.h"
+#include "LevelParser.h"
 
 const std::string PlayState::s_playID = "PLAY";
 
+void PlayState::render()
+{
+	GameState::render();
+	pLevel->render();
+}
+
 void PlayState::update()
 {
+	
 	GameState::update();
+	pLevel->update();
   if(TheInputHandler::Instance()->isKeyDown(SDL_SCANCODE_ESCAPE))
     {
 		TheGame::Instance()->getStateMachine()
 	->pushState(new PauseState());
     }
-  if(checkCollision(dynamic_cast<SDLGameObject*>
+  // problem here if no object
+  /*if(checkCollision(dynamic_cast<SDLGameObject*>
 		    (m_gameObjects[0]), dynamic_cast<SDLGameObject*>
 		    (m_gameObjects[1])))
     {
       TheGame::Instance()->getStateMachine()
 	->pushState(new GameOverState());
-    }
+    }*/
 }
 
 bool PlayState::onEnter()
 {
-  StateParser stateParser;
-  stateParser.parseState("xml/test.xml", s_playID, &m_gameObjects,
-			 &m_textureIDList);
-  std::cout << "entering PlayState\n";
-  return true;
+	LevelParser levelParser;
+	pLevel = levelParser.parseLevel("assets/map1.tmx");
+	StateParser stateParser;
+	stateParser.parseState("xml/test.xml", s_playID, &m_gameObjects,
+	&m_textureIDList);
+	std::cout << "entering PlayState\n";
+	return true;
 }
 
 bool PlayState::checkCollision(SDLGameObject* p1, SDLGameObject* p2)

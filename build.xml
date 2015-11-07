@@ -19,6 +19,7 @@
       <compilerarg value = "-std=c++11"/>
       <libset libs="SDL2"/>
       <libset libs="SDL2_image"/>
+	  <libset libs="z"/>
       <libset libs="stdc++"/> <!-- to import standard lybrary of c++ -->
       <libset libs="m"/> <!-- to import math -->
       <fileset dir="./src/" includes="*.cpp"/>

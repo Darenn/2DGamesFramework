@@ -16,6 +16,8 @@
 bool Game::init(const char* title, int posx, int posy,
 				int width, int height, bool fullscreen)
 {
+	m_gameWidth = width;
+	m_gameHeight = height;
 	int flags(0);
 	if (fullscreen) { flags = SDL_WINDOW_FULLSCREEN; } 
 	if (SDL_Init(SDL_INIT_EVERYTHING) >= 0)
@@ -52,9 +54,7 @@ bool Game::init(const char* title, int posx, int posy,
 	}
 	std::cerr << "Init succeeded" << std::endl;
 
-// Test area
-	TheTextureManager::Instance()
-		->load("assets/animate-alpha.png", "animate", m_pRenderer);  
+// Test area  
 	TheInputHandler::Instance()
 		->initialiseJoysticks();
 	TheGameObjectFactory::Instance()

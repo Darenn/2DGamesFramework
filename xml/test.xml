@@ -18,6 +18,7 @@
     <TEXTURES>
       <texture filename="assets/heli.png" ID="helicopter"/>
       <texture filename="assets/heli2.png" ID="helicopter2"/>
+	  <texture filename="assets/blocks1.png" ID="blocks1"/>
     </TEXTURES>
     <OBJECTS>
       <object type="Player" x="500" y="100" width="128" height="55"
