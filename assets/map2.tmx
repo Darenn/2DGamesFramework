@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="60" height="15" tilewidth="32" tileheight="32">
+ <properties>
+  <property name="helicopter" value="heli.png"/>
+ </properties>
+ <tileset firstgid="1" name="blocks1" tilewidth="32" tileheight="32" spacing="2" margin="2">
+  <image source="blocks1.png" width="614" height="376"/>
+ </tileset>
+ <layer name="Calque de Tile 1" width="60" height="15">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
+  </data>
+ </layer>
+ <layer name="Calque 2" width="60" height="15">
+  <data encoding="base64" compression="zlib">
+   eJztwQEBAAAAgiD/r25IQAEAAPBoDhAAAQ==
+  </data>
+ </layer>
+ <layer name="Calque 3" width="60" height="15">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFIJAIxElI/DggjgfiBBrpGwWjgJqA3HQ3nNMret6ktb5RMArIBfVA3ADEjUDcBMTNQNyCQ6yVCvoGA9AmElNL30CDUf+O+nfUv6P+Hcz+BQCdoSfZ
+  </data>
+ </layer>
+ <objectgroup name="Calque d'objets 1" width="60" height="15">
+  <object name="Helicopter1" type="Player" x="444" y="57" width="33" height="30">
+   <properties>
+    <property name="numFrames" value="4"/>
+    <property name="textureHeight" value="55"/>
+    <property name="textureID" value="heli"/>
+    <property name="textureWidth" value="128"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

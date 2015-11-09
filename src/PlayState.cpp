@@ -41,7 +41,7 @@ void PlayState::update()
 bool PlayState::onEnter()
 {
 	LevelParser levelParser;
-	pLevel = levelParser.parseLevel("assets/map1.tmx");
+	pLevel = levelParser.parseLevel("assets/map2.tmx");
 	StateParser stateParser;
 	stateParser.parseState("xml/test.xml", s_playID, &m_gameObjects,
 	&m_textureIDList);
