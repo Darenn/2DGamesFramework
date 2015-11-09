@@ -26,7 +26,7 @@
    <properties>
     <property name="numFrames" value="4"/>
     <property name="textureHeight" value="55"/>
-    <property name="textureID" value="heli"/>
+    <property name="textureID" value="helicopter"/>
     <property name="textureWidth" value="128"/>
    </properties>
   </object>

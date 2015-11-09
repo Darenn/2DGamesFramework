@@ -21,8 +21,8 @@
 	  <texture filename="assets/blocks1.png" ID="blocks1"/>
     </TEXTURES>
     <OBJECTS>
-      <object type="Player" x="500" y="100" width="128" height="55"
-			  textureID="helicopter" numFrames="4"/>
+      <!--<object type="Player" x="500" y="100" width="128" height="55"
+			  textureID="helicopter" numFrames="4"/>-->
       <object type="Enemy" x="100" y="100" width="128" height="55"
 			  textureID="helicopter2" numFrames="4"/>
     </OBJECTS>
